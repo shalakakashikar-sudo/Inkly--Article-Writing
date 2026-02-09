@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { View, Question, LearningModule } from './types';
 import { QUESTION_SETS } from './constants';
@@ -229,7 +228,7 @@ const App: React.FC = () => {
       </main>
 
       <footer className="h-8 bg-[#2c1810] text-[#fdfbf7] flex items-center justify-center text-[10px] font-black uppercase tracking-[0.3em]">
-        The Master Article Writing Guide
+        Created by <span className="text-[#d4af37] ml-2">Shalaka Kashikar</span>
       </footer>
     </div>
   );
