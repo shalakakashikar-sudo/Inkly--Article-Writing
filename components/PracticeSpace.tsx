@@ -42,16 +42,21 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
   }, [feedback]);
 
   const handleReview = async () => {
-    // 1. Initial validation
+    // 1. Initial text validation
     if (!userText.trim() || wordCount < 20) {
       alert("Please write at least 20 words so the examiner can provide meaningful feedback.");
       return;
     }
 
-    // 2. Key Presence Check - Using optional chaining for safety
-    const apiKey = process?.env?.API_KEY;
-    if (!apiKey || apiKey === "undefined") {
-      alert("Error: API Key is missing. If you just added it to Vercel, you must trigger a RE-DEPLOY for the changes to take effect.");
+    /** 
+     * 2. Key Presence Check 
+     * IMPORTANT: We use the exact literal 'process.env.API_KEY' so Vite's 
+     * string replacement during build can find it.
+     */
+    const apiKey = process.env.API_KEY;
+    
+    if (!apiKey || apiKey === "" || apiKey === "undefined") {
+      alert("Error: API Key is missing. Ensure you have added 'API_KEY' in your Vercel Environment Variables and triggered a NEW DEPLOYMENT.");
       return;
     }
 
@@ -81,8 +86,7 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
             
             CRITICAL INSTRUCTIONS:
             - Grade strictly out of 5 marks.
-            - Evaluate the QUALITY of the hook.
-            - Provide a suggested revision for the INTRO and explain the specific rhetorical technique used in your version.
+            - Provide a suggested revision for the INTRO only.
             - Return ONLY clean JSON.`
           }
         ],

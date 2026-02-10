@@ -9,7 +9,7 @@ export default defineConfig({
     port: 3000,
   },
   define: {
-    // This ensures process.env.API_KEY is replaced with the actual string at build time
-    'process.env.API_KEY': JSON.stringify(process.env.API_KEY)
+    // This performs a literal find-and-replace for 'process.env.API_KEY' in your code
+    'process.env.API_KEY': JSON.stringify(process.env.API_KEY || '')
   }
 });
