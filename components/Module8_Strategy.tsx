@@ -9,8 +9,34 @@ const Module8_Strategy: React.FC = () => {
         <p className="text-lg text-[#5d4037] italic">In the exam hall, speed is survival. This is the exact timeline for a perfect 5-mark article in 12 minutes.</p>
       </header>
 
-      <div className="max-w-3xl mx-auto space-y-12">
-        <div className="bg-white p-8 md:p-12 border-2 border-[#2c1810] shadow-[15px_15px_0px_0px_rgba(44,24,16,0.1)] relative overflow-hidden">
+      <div className="max-w-4xl mx-auto space-y-12">
+        {/* Universal Filler Bank Section */}
+        <div className="bg-[#2c1810] p-12 shadow-2xl text-white relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-[#d4af37]"></div>
+          <h3 className="text-3xl font-bold text-[#d4af37] mb-8 uppercase tracking-widest text-center italic">The Master Filler Bank</h3>
+          <p className="text-center text-xs text-[#dccab1] mb-12 font-serif uppercase tracking-[0.2em]">Sophisticated "Safety Net" phrases for any scenario.</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <h4 className="text-[10px] font-black uppercase text-[#d4af37] border-b border-white/10 pb-2">The "Complexity" Pumper</h4>
+              <p className="text-sm italic font-serif leading-relaxed">"One cannot turn a blind eye to the reality that [Topic] is not a temporary hurdle, but a systemic challenge requiring a fundamental paradigm shift in our collective approach."</p>
+              <p className="text-sm italic font-serif leading-relaxed">"The repercussions of this trend are multifaceted, reverberating through various strata of our society and affecting both the individual and the community at large."</p>
+            </div>
+            <div className="space-y-6">
+              <h4 className="text-[10px] font-black uppercase text-[#d4af37] border-b border-white/10 pb-2">The "Transition" Pumper</h4>
+              <p className="text-sm italic font-serif leading-relaxed">"While the immediate consequences are glaringly obvious to even a casual observer, the long-term fallout remains a troubling mystery that warrants deeper introspection."</p>
+              <p className="text-sm italic font-serif leading-relaxed">"Despite the plethora of policies enacted to address this phenomenon, the true catalyst for meaningful change remains a robust sense of public accountability."</p>
+            </div>
+          </div>
+
+          <div className="mt-12 p-6 bg-white/5 border border-white/10">
+            <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-4">The "Universal Conclusion" Filler</h4>
+            <p className="text-lg font-serif italic text-white/90">"Ultimately, the path forward is illuminated not by grandiose gestures, but by the quiet determination of individuals who choose responsibility over apathy. Let us be the generation that acted."</p>
+          </div>
+        </div>
+
+        {/* Timeline */}
+        <div className="bg-[#fdfbf7] p-8 md:p-12 border-2 border-[#2c1810] shadow-[15px_15px_0px_0px_rgba(44,24,16,0.1)] relative overflow-hidden">
            <div className="absolute top-0 right-0 w-24 h-24 bg-[#f1ede4] rotate-45 -mr-12 -mt-12 border-b-2 border-[#dccab1]"></div>
            <h3 className="text-2xl font-bold text-[#2c1810] mb-12 uppercase tracking-tighter border-b-2 border-[#f1ede4] pb-4">Exam Timeline</h3>
            
@@ -34,32 +60,8 @@ const Module8_Strategy: React.FC = () => {
            </div>
         </div>
 
-        {/* Universal Filler Bank Section */}
-        <div className="bg-[#2c1810] p-10 shadow-2xl text-white">
-          <h3 className="text-2xl font-bold text-[#d4af37] mb-8 uppercase tracking-widest text-center italic">Universal Filler Bank</h3>
-          <p className="text-center text-xs text-[#dccab1] mb-10 font-serif">High-impact "Safety Net" sentences to use when you run out of ideas or need more word count.</p>
-          <div className="space-y-6">
-            <div className="p-4 bg-white/5 border border-white/10">
-              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To pad the Body Paragraph:</h4>
-              <p className="text-sm italic font-serif">"The repercussions of this trend are multifaceted, reverberating through various strata of our society and affecting both the individual and the collective."</p>
-            </div>
-            <div className="p-4 bg-white/5 border border-white/10">
-              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To bridge two ideas:</h4>
-              <p className="text-sm italic font-serif">"While the immediate consequences are glaringly obvious, the long-term fallout remains a mystery that warrants deeper introspection."</p>
-            </div>
-            <div className="p-4 bg-white/5 border border-white/10">
-              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To sound more authoritative:</h4>
-              <p className="text-sm italic font-serif">"One cannot turn a blind eye to the fact that [Topic] is not merely a temporary hurdle, but a systemic challenge requiring a paradigm shift in our approach."</p>
-            </div>
-            <div className="p-4 bg-white/5 border border-white/10">
-              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To transition to solutions:</h4>
-              <p className="text-sm italic font-serif">"While policies provide the necessary framework, the true catalyst for meaningful change remains a robust sense of individual and public accountability."</p>
-            </div>
-          </div>
-        </div>
-
         {/* Hall Hacks Section */}
-        <div className="bg-[#fdfbf7] border-2 border-[#8b0000] p-10">
+        <div className="bg-[#fdfbf7] border-2 border-[#8b0000] p-10 shadow-lg">
           <h3 className="text-2xl font-bold text-[#8b0000] mb-8 text-center uppercase tracking-widest italic">Hall Hacks: "In Case of Emergency"</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
              <div className="space-y-4">
@@ -78,31 +80,6 @@ const Module8_Strategy: React.FC = () => {
                <h4 className="text-xs font-black uppercase text-[#2c1810] border-b pb-2">Weak Body?</h4>
                <p className="text-sm font-serif italic">Force a transition: Start Para 3 with <b>"Conversely,"</b> even if the contrast is small. It forces logical structure into your writing.</p>
              </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow-xl">
-            <h4 className="text-[#8b0000] font-black uppercase text-xs mb-4 tracking-widest">Golden Rule #1</h4>
-            <p className="text-lg font-serif italic leading-relaxed">
-              <b>Finished &gt; Perfect.</b> A structured article with 4 paragraphs always beats a poetic 2-paragraph fragment.
-            </p>
-          </div>
-          <div className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow-xl">
-            <h4 className="text-[#8b0000] font-black uppercase text-xs mb-4 tracking-widest">Golden Rule #2</h4>
-            <p className="text-lg font-serif italic leading-relaxed">
-              <b>Stick to the Cues.</b> Examiners look for the specific cues provided in the question. Tick them off as you write.
-            </p>
-          </div>
-        </div>
-
-        <div className="bg-[#2c1810] p-12 text-center text-white shadow-xl rounded-sm">
-          <h3 className="text-3xl font-bold mb-8 italic text-[#d4af37]">The Lightning Mantra</h3>
-          <p className="text-xl font-serif italic leading-relaxed max-w-2xl mx-auto">
-            "Structure is your shield, and speed is your sword. Master the 12-minute blitz to secure your 5 marks and move on to the next victory."
-          </p>
-          <div className="mt-10 inline-block border-2 border-[#d4af37] px-8 py-3 text-lg font-black uppercase tracking-[0.4em] text-[#d4af37]">
-            12 Minutes. 5 Marks.
           </div>
         </div>
       </div>

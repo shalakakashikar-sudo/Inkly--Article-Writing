@@ -139,7 +139,7 @@ const Module5_Categories: React.FC = () => {
           <div 
             key={cat.id} 
             onClick={() => setActiveCat(activeCat === cat.id ? null : cat.id)}
-            className={`p-6 border-2 transition-all cursor-pointer text-center relative overflow-hidden group rounded-sm ${activeCat === cat.id ? 'bg-[#2c1810] text-white border-[#2c1810] shadow-2xl scale-105' : 'bg-white text-[#2c1810] border-[#dccab1] hover:border-[#8b0000] shadow'}`}
+            className={`p-6 border-2 transition-all cursor-pointer text-center relative overflow-hidden group rounded-sm ${activeCat === cat.id ? 'bg-[#2c1810] text-white border-[#2c1810] shadow-2xl scale-105' : 'bg-[#fdfbf7] text-[#2c1810] border-[#dccab1] hover:border-[#8b0000] shadow'}`}
           >
             <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{cat.icon}</div>
             <h3 className="text-xs font-black uppercase tracking-widest">{cat.title}</h3>
@@ -149,7 +149,7 @@ const Module5_Categories: React.FC = () => {
       </div>
 
       {activeCat && currentCat && (
-        <div className="max-w-5xl mx-auto bg-white border-4 border-[#2c1810] shadow-2xl animate-in slide-in-from-top-6 duration-500 overflow-hidden rounded-sm">
+        <div className="max-w-5xl mx-auto bg-[#fdfbf7] border-4 border-[#2c1810] shadow-2xl animate-in slide-in-from-top-6 duration-500 overflow-hidden rounded-sm">
           <div className="bg-[#2c1810] p-6 text-white flex justify-between items-center border-b-2 border-[#d4af37]">
             <div>
               <h3 className="text-2xl font-bold italic">{currentCat.title} Mastery Card</h3>
@@ -160,11 +160,11 @@ const Module5_Categories: React.FC = () => {
           
           <div className="p-8 md:p-12 space-y-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-              <div className="p-6 bg-[#fdfbf7] border-l-8 border-[#8b0000] shadow-sm italic text-lg font-serif">
+              <div className="p-6 bg-[#f1ede4] border-l-8 border-[#8b0000] shadow-sm italic text-lg font-serif">
                 <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-3">Power Quote</h4>
                 {currentCat.quote}
               </div>
-              <div className="p-6 bg-[#fdfbf7] border-l-8 border-[#2c1810] shadow-sm italic text-lg font-serif">
+              <div className="p-6 bg-[#f1ede4] border-l-8 border-[#2c1810] shadow-sm italic text-lg font-serif">
                 <h4 className="text-[10px] font-black uppercase text-[#2c1810] mb-3">Hack Line (The Hook)</h4>
                 <ul className="space-y-4">
                   {currentCat.hackLines.map((line, idx) => (
@@ -176,7 +176,7 @@ const Module5_Categories: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {currentCat.mustKnow.map((item, i) => (
-                <div key={i} className="p-6 bg-white border border-[#dccab1] shadow-sm flex flex-col h-full relative group hover:border-[#8b0000] transition-all">
+                <div key={i} className="p-6 bg-[#fdfbf7] border border-[#dccab1] shadow-sm flex flex-col h-full relative group hover:border-[#8b0000] transition-all">
                   <h4 className="text-xl font-bold text-[#8b0000] mb-4 font-serif italic border-b border-[#f1ede4] pb-2">{item.topic}</h4>
                   <div className="space-y-6 flex-grow">
                     <div>

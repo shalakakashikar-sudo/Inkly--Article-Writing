@@ -3,7 +3,7 @@ import React from 'react';
 
 const ArticleLayoutInfographic: React.FC = () => {
   return (
-    <div className="bg-white border-4 border-[#2c1810] p-6 md:p-14 shadow-[20px_20px_0px_0px_rgba(44,24,16,0.1)] max-w-[1440px] mx-auto relative overflow-hidden my-12">
+    <div className="bg-[#fdfbf7] border-4 border-[#2c1810] p-6 md:p-14 shadow-[20px_20px_0px_0px_rgba(44,24,16,0.1)] max-w-[1440px] mx-auto relative overflow-hidden my-12">
       <div className="absolute top-0 right-0 w-80 h-80 bg-[#8b0000]/5 -mr-40 -mt-40 rounded-full"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#d4af37]/5 -ml-32 -mb-32 rounded-full"></div>
       
@@ -16,7 +16,7 @@ const ArticleLayoutInfographic: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Left: Advanced Logic & Nuance */}
         <div className="lg:col-span-3 space-y-8">
-          <div className="bg-[#fdfbf7] p-8 border-l-4 border-[#8b0000] shadow-sm">
+          <div className="bg-[#f1ede4] p-8 border-l-4 border-[#8b0000] shadow-sm">
             <h4 className="text-xs font-black uppercase tracking-widest text-[#8b0000] mb-4">The WHAT → WHY → HOW</h4>
             <p className="text-lg font-serif italic text-[#5d4037] leading-relaxed">
               <b className="text-[#2c1810]">WHAT:</b> Identify the issue (e.g., Plastic Pollution).<br/>
@@ -24,13 +24,13 @@ const ArticleLayoutInfographic: React.FC = () => {
               <b className="text-[#2c1810]">HOW:</b> Suggest action (Policy change).
             </p>
           </div>
-          <div className="bg-[#fdfbf7] p-8 border-l-4 border-[#2c1810] shadow-sm">
+          <div className="bg-[#f1ede4] p-8 border-l-4 border-[#2c1810] shadow-sm">
             <h4 className="text-xs font-black uppercase tracking-widest text-[#2c1810] mb-4">Art vs Essay</h4>
             <p className="text-lg font-serif italic text-[#5d4037] leading-relaxed">
               Articles are <b className="text-[#2c1810]">conversational</b>. Use <b className="text-[#2c1810]">Shocking Stats</b> instead of boring facts. Headlines must be <b className="text-[#2c1810]">Journalistic</b>.
             </p>
           </div>
-          <div className="bg-[#fdfbf7] p-8 border-l-4 border-[#b8860b] shadow-sm">
+          <div className="bg-[#f1ede4] p-8 border-l-4 border-[#b8860b] shadow-sm">
             <h4 className="text-xs font-black uppercase tracking-widest text-[#b8860b] mb-4">The Invisible Thread</h4>
             <p className="text-lg font-serif italic text-[#5d4037] leading-relaxed">
               Cohesion is key. Every paragraph must end with a <b className="text-[#2c1810]">linking phrase</b> that sets up the next one.
@@ -48,7 +48,7 @@ const ArticleLayoutInfographic: React.FC = () => {
         </div>
 
         {/* Center: Annotated Frame */}
-        <div className="lg:col-span-6 relative bg-white border-2 border-[#dccab1] p-10 md:p-14 shadow-inner">
+        <div className="lg:col-span-6 relative bg-[#fdfbf7] border-2 border-[#dccab1] p-10 md:p-14 shadow-inner">
           <div className="absolute top-0 left-0 w-full h-2 bg-[#2c1810]"></div>
           
           <div className="text-center py-10 border-b-2 border-[#f1ede4] mb-16">
@@ -58,7 +58,7 @@ const ArticleLayoutInfographic: React.FC = () => {
 
           <div className="space-y-16">
             {/* Para 1 */}
-            <div className="p-10 bg-[#fdfbf7] border border-[#dccab1] relative group pt-16">
+            <div className="p-10 bg-[#f1ede4] border border-[#dccab1] relative group pt-16">
               <div className="absolute -top-4 left-6 bg-[#8b0000] text-white text-[12px] font-black px-5 py-2 uppercase shadow-md z-10">THE HOOK</div>
               <h5 className="text-sm font-black uppercase text-[#8b0000] mb-4 tracking-wider">Para 1: Introduction (40-50 words)</h5>
               <p className="text-lg font-serif leading-relaxed italic text-[#3d2b1f]">
@@ -67,7 +67,7 @@ const ArticleLayoutInfographic: React.FC = () => {
             </div>
 
             {/* Para 2-3 */}
-            <div className="p-10 bg-[#fdfbf7] border border-[#dccab1] relative pt-16">
+            <div className="p-10 bg-[#f1ede4] border border-[#dccab1] relative pt-16">
               <div className="absolute -top-4 left-6 bg-[#2c1810] text-white text-[12px] font-black px-5 py-2 uppercase shadow-md z-10">THE BODY</div>
               <h5 className="text-sm font-black uppercase text-[#2c1810] mb-4 tracking-wider">Para 2-3: Analysis (100-120 words)</h5>
               <p className="text-lg font-serif leading-relaxed italic text-[#3d2b1f]">
@@ -76,7 +76,7 @@ const ArticleLayoutInfographic: React.FC = () => {
             </div>
 
             {/* Para 4 */}
-            <div className="p-10 bg-[#fdfbf7] border border-[#dccab1] relative pt-16">
+            <div className="p-10 bg-[#f1ede4] border border-[#dccab1] relative pt-16">
               <div className="absolute -top-4 left-6 bg-[#d4af37] text-[#2c1810] text-[12px] font-black px-5 py-2 uppercase shadow-md border border-[#2c1810]/10 z-10">THE EXIT</div>
               <h5 className="text-sm font-black uppercase text-[#d4af37] mb-4 tracking-wider">Para 4: Conclusion (40-50 words)</h5>
               <p className="text-lg font-serif leading-relaxed italic text-[#3d2b1f]">
@@ -111,7 +111,7 @@ const ArticleLayoutInfographic: React.FC = () => {
             </ul>
           </div>
 
-          <div className="p-8 border-2 border-[#dccab1] bg-white italic text-base text-[#5d4037] leading-relaxed">
+          <div className="p-8 border-2 border-[#dccab1] bg-[#fdfbf7] italic text-base text-[#5d4037] leading-relaxed">
             <h4 className="text-[10px] font-black uppercase text-[#2c1810] mb-4">Word Count Rule</h4>
             <b className="text-[#2c1810]">Standard:</b> 120-150 words.<br/>
             <b className="text-[#2c1810]">Nuance:</b> Going 10 words over is safer than 10 words under.

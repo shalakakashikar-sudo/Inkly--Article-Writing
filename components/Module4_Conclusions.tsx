@@ -53,7 +53,7 @@ const Module4_Conclusions: React.FC = () => {
             advice: "Reference your opening scenario to create closure."
           }
         ].map((item, i) => (
-          <div key={i} className="bg-white flex flex-col md:flex-row border border-[#dccab1] shadow-xl overflow-hidden group hover:border-[#8b0000] transition-colors">
+          <div key={i} className="bg-[#fdfbf7] flex flex-col md:flex-row border border-[#dccab1] shadow-xl overflow-hidden group hover:border-[#8b0000] transition-colors">
             <div className="md:w-1/3 bg-[#8b0000] text-white p-10 flex flex-col justify-center">
               <h4 className="text-2xl font-bold mb-4">{item.type}</h4>
               <p className="text-xs uppercase tracking-widest text-[#f1ede4] font-black">{item.advice}</p>

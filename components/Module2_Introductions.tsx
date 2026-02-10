@@ -9,6 +9,30 @@ const Module2_Introductions: React.FC = () => {
         <p className="text-2xl text-[#5d4037] leading-relaxed italic">The first paragraph is where you win or lose your reader. Stop saying "Pollution is a big problem" and start showing why it matters.</p>
       </header>
 
+      {/* Universal Starter Bank */}
+      <div className="max-w-5xl mx-auto bg-[#2c1810] p-12 shadow-2xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 -mr-32 -mt-32 rounded-full"></div>
+        <h3 className="text-[#d4af37] text-xs font-black uppercase tracking-[0.4em] mb-10 text-center">Universal Intro Starters (The "I'm Stuck" Bank)</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-[#fdfbf7]">
+          <div className="space-y-2">
+            <h4 className="text-[10px] font-black uppercase text-[#d4af37]">For any Problem:</h4>
+            <p className="text-lg font-serif italic">"While we celebrate the dizzying heights of modern progress, a shadow of neglect looms over the vital issue of [Topic]. It is a paradox that deserves our immediate attention."</p>
+          </div>
+          <div className="space-y-2">
+            <h4 className="text-[10px] font-black uppercase text-[#d4af37]">For any Tech/Change:</h4>
+            <p className="text-lg font-serif italic">"We live in a world where change is the only constant. Yet, the rapid proliferation of [Topic] has brought us to a crossroads where caution must meet curiosity."</p>
+          </div>
+          <div className="space-y-2">
+            <h4 className="text-[10px] font-black uppercase text-[#d4af37]">For any Social/Value:</h4>
+            <p className="text-lg font-serif italic">"The true measure of a society's advancement lies not in its machines, but in its values. Today, however, the fabric of [Topic] seems to be fraying at the edges."</p>
+          </div>
+          <div className="space-y-2">
+            <h4 className="text-[10px] font-black uppercase text-[#d4af37]">The "Time" Hook:</h4>
+            <p className="text-lg font-serif italic">"The clock is ticking, and the silence surrounding [Topic] is becoming deafening. It is no longer a distant concern; it is a current crisis."</p>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-5xl mx-auto space-y-16">
         {[
           {
@@ -36,7 +60,7 @@ const Module2_Introductions: React.FC = () => {
             tip: "Great for highlighting government or civic failures."
           }
         ].map((item, i) => (
-          <div key={i} className="bg-white border border-[#dccab1] shadow-xl overflow-hidden flex flex-col md:flex-row group hover:border-[#8b0000] transition-colors">
+          <div key={i} className="bg-[#fdfbf7] border border-[#dccab1] shadow-xl overflow-hidden flex flex-col md:flex-row group hover:border-[#8b0000] transition-colors">
             <div className="md:w-1/3 bg-[#8b0000] p-10 text-white flex flex-col justify-center">
               <h3 className="text-xl font-bold uppercase tracking-tighter mb-4">{item.title}</h3>
               <p className="text-[10px] font-black uppercase tracking-widest text-white/50 mb-2">The Formula</p>
@@ -45,54 +69,13 @@ const Module2_Introductions: React.FC = () => {
                 TIP: {item.tip}
               </div>
             </div>
-            <div className="md:w-2/3 p-10 bg-white flex flex-col justify-center">
-              <div className="p-8 bg-[#fdfbf7] border-l-4 border-[#2c1810] font-serif text-2xl leading-relaxed text-[#3d2b1f] italic shadow-inner">
+            <div className="md:w-2/3 p-10 bg-[#fdfbf7] flex flex-col justify-center">
+              <div className="p-8 bg-[#f1ede4] border-l-4 border-[#2c1810] font-serif text-2xl leading-relaxed text-[#3d2b1f] italic shadow-inner">
                 {item.example}
               </div>
             </div>
           </div>
         ))}
-      </div>
-
-      {/* Universal Openers Section */}
-      <div className="max-w-5xl mx-auto bg-[#fdfbf7] border-2 border-[#2c1810] p-10">
-        <h3 className="text-2xl font-bold text-[#2c1810] mb-8 text-center uppercase tracking-widest">The Instant Opener Bank</h3>
-        <p className="text-center text-sm italic text-[#8b4513] mb-8">Four "Safety Net" sentences that work for almost any exam topic.</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Paradox" Opener:</h4>
-            <p className="text-sm italic font-serif">"It is a startling paradox that in an era defined by [Technology/Progress], we are witnessing a tragic disintegration of [Topic/Value]."</p>
-          </div>
-          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Social Fabric" Opener:</h4>
-            <p className="text-sm italic font-serif">"The very fabric of our society is being frayed by the relentless tide of [Topic], a trend that threatens to derail our collective future."</p>
-          </div>
-          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Mirror" Opener:</h4>
-            <p className="text-sm italic font-serif">"A nation's greatness is often reflected in how it handles [Topic]; currently, however, that mirror reflects a troubling reality of neglect."</p>
-          </div>
-          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Urgency" Opener:</h4>
-            <p className="text-sm italic font-serif">"While we discuss [Topic] as a distant concern, the reality is that the clock is ticking, and the fallout of our inaction is already visible."</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-[#2c1810] p-16 text-white max-w-5xl mx-auto shadow-2xl relative">
-        <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-white/10 -mr-4 -mt-4"></div>
-        <h3 className="text-4xl font-bold mb-10 text-[#d4af37] italic">Avoid the 'Student Trap'</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="p-8 border border-red-500/20 bg-red-500/5">
-            <h4 className="text-sm font-black uppercase text-red-500 mb-4">The Cliché (✗)</h4>
-            <p className="text-lg italic font-serif text-[#dccab1]">"In today's modern world, technology plays a vital role. Pollution is a big problem affecting everyone..."</p>
-            <p className="mt-4 text-xs text-red-400 font-bold uppercase tracking-widest">— Boring & Generic</p>
-          </div>
-          <div className="p-8 border border-green-500/20 bg-green-500/5">
-            <h4 className="text-sm font-black uppercase text-green-500 mb-4">The Impact (✓)</h4>
-            <p className="text-lg italic font-serif text-[#fdfbf7]">"The screen in your palm is more powerful than the computer that sent humans to the moon—yet we use it to scroll through memes while life passes us by."</p>
-            <p className="mt-4 text-xs text-green-400 font-bold uppercase tracking-widest">— Engaging & Relevant</p>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -135,7 +135,7 @@ const App: React.FC = () => {
               <p className="text-center text-lg text-[#8b4513] mb-12 font-serif italic">From Foundations to Exam Mastery.</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {MODULES.map((mod) => (
-                  <div key={mod.id} onClick={() => navigateTo('module-detail', mod.id)} className="bg-white p-8 border border-[#dccab1] shadow hover:border-[#8b0000] hover:-translate-y-1 transition-all cursor-pointer group">
+                  <div key={mod.id} onClick={() => navigateTo('module-detail', mod.id)} className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow hover:border-[#8b0000] hover:-translate-y-1 transition-all cursor-pointer group">
                     <div className="flex items-center gap-4 mb-4">
                       <span className="text-4xl group-hover:scale-110 transition-transform">{mod.icon}</span>
                       <div>
@@ -168,7 +168,7 @@ const App: React.FC = () => {
                    <input 
                     type="text" 
                     placeholder="Search topics..."
-                    className="w-full pl-12 pr-4 py-4 bg-[#fdfbf7] border-b-2 border-[#2c1810] focus:outline-none text-lg"
+                    className="w-full pl-12 pr-4 py-4 bg-[#fdfbf7] border-b-2 border-[#2c1810] focus:outline-none text-lg placeholder-[#8b4513]/50"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                    />
@@ -200,7 +200,7 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-transparent relative flex flex-col">
-      <nav className="sticky top-0 z-50 bg-[#fdfbf7]/90 backdrop-blur-md border-b border-[#dccab1]">
+      <nav className="sticky top-0 z-50 bg-[#f1ede4]/90 backdrop-blur-md border-b border-[#dccab1]">
         <div className="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4 cursor-pointer group" onClick={() => navigateTo('home')}>
             <div className="text-[#2c1810] p-2 border-2 border-[#2c1810] group-hover:bg-[#2c1810] group-hover:text-[#fdfbf7] transition-all">

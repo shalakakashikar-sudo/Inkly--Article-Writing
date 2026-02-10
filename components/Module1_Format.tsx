@@ -13,22 +13,22 @@ const Module1_Format: React.FC = () => {
       <ArticleLayoutInfographic />
 
       <div className="max-w-4xl mx-auto space-y-12">
-        <div className="bg-white p-10 border border-[#dccab1] shadow-xl relative">
+        <div className="bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-xl relative">
           <div className="absolute top-0 left-0 w-1.5 h-full bg-[#8b0000]"></div>
           <h3 className="text-2xl font-bold text-[#2c1810] mb-6 uppercase tracking-tight">1. The Headline Blueprint</h3>
           
           <p className="text-lg text-[#5d4037] mb-8 leading-relaxed">A perfect headline must be attention-grabbing and hint at your stance. It should ideally be 5-10 words long.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            <div className="p-6 bg-[#fdfbf7] border border-[#dccab1]">
+            <div className="p-6 bg-[#f1ede4] border border-[#dccab1]">
               <h4 className="font-bold text-[#8b0000] mb-3 uppercase text-xs">The Question</h4>
               <p className="text-base italic font-serif">"Are We Raising a Screen-Addicted Generation?"</p>
             </div>
-            <div className="p-6 bg-[#fdfbf7] border border-[#dccab1]">
+            <div className="p-6 bg-[#f1ede4] border border-[#dccab1]">
               <h4 className="font-bold text-[#8b0000] mb-3 uppercase text-xs">The Strong Statement</h4>
               <p className="text-base italic font-serif">"The Silent Killer: How Pollution Steals Our Future"</p>
             </div>
-            <div className="p-6 bg-[#fdfbf7] border border-[#dccab1]">
+            <div className="p-6 bg-[#f1ede4] border border-[#dccab1]">
               <h4 className="font-bold text-[#8b0000] mb-3 uppercase text-xs">Wordplay/Alliteration</h4>
               <p className="text-base italic font-serif">"Fast Fashion: Fads, Fabrics, and Fallout"</p>
             </div>

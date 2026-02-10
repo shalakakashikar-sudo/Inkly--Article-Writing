@@ -138,7 +138,7 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
                value={userText}
                onChange={(e) => setUserText(e.target.value)}
                placeholder="Draft your article here... Start with a centered Title and Byline."
-               className="w-full h-[600px] p-12 bg-[#fdfbf7] border-2 border-[#dccab1] focus:border-[#2c1810] focus:outline-none text-[#2c1810] font-serif text-2xl leading-loose shadow-inner parchment-texture resize-none"
+               className="w-full h-[600px] p-12 bg-[#fdfbf7] border-2 border-[#dccab1] focus:border-[#2c1810] focus:outline-none text-[#2c1810] font-serif text-2xl leading-loose shadow-inner parchment-texture resize-none placeholder-[#8b4513]/30"
                disabled={isReviewing}
              />
              
@@ -162,7 +162,7 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
 
           {/* Feedback Section */}
           {feedback && (
-            <div className="bg-white border-2 border-[#2c1810] p-12 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+            <div className="bg-[#fdfbf7] border-2 border-[#2c1810] p-12 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
               <div className="flex justify-between items-start mb-12 border-b-2 border-[#f1ede4] pb-8">
                 <div>
                   <h3 className="text-4xl font-bold text-[#2c1810] italic">The Red Pen Review</h3>
@@ -175,15 +175,15 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                <div className="p-8 border border-[#dccab1] bg-[#fdfbf7] text-center">
+                <div className="p-8 border border-[#dccab1] bg-[#f1ede4] text-center">
                   <h5 className="text-[12px] font-black uppercase text-[#8b4513] mb-3">Format</h5>
                   <div className="text-3xl font-bold">{feedback.marks.format}/1</div>
                 </div>
-                <div className="p-8 border border-[#dccab1] bg-[#fdfbf7] text-center">
+                <div className="p-8 border border-[#dccab1] bg-[#f1ede4] text-center">
                   <h5 className="text-[12px] font-black uppercase text-[#8b4513] mb-3">Content</h5>
                   <div className="text-3xl font-bold">{feedback.marks.content}/2</div>
                 </div>
-                <div className="p-8 border border-[#dccab1] bg-[#fdfbf7] text-center">
+                <div className="p-8 border border-[#dccab1] bg-[#f1ede4] text-center">
                   <h5 className="text-[12px] font-black uppercase text-[#8b4513] mb-3">Expression</h5>
                   <div className="text-3xl font-bold">{feedback.marks.expression}/2</div>
                 </div>

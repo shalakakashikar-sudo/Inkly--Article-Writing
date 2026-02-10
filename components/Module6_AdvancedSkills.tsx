@@ -48,30 +48,30 @@ const Module6_AdvancedSkills: React.FC = () => {
       </div>
 
       {/* High-Mark Lexicon */}
-      <div className="max-w-4xl mx-auto bg-white p-10 border border-[#dccab1] shadow-xl">
+      <div className="max-w-4xl mx-auto bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-xl">
         <h3 className="text-2xl font-bold text-[#2c1810] mb-8 uppercase tracking-tighter italic border-b pb-4">The High-Mark Lexicon</h3>
         <p className="text-sm text-[#8b4513] mb-8 font-serif italic">Use these high-impact verbs to prove sophisticated control of language.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-6">
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#8b0000]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#8b0000]">
               <h5 className="text-[11px] font-black text-[#8b0000] uppercase mb-1">Exacerbate (v.)</h5>
               <p className="text-[10px] font-bold text-[#5d4037] mb-2">Meaning: To make a problem or bad situation worse.</p>
               <p className="text-sm italic">"Ignoring minor leaks only exacerbates the global water crisis."</p>
             </div>
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#2c1810]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#2c1810]">
               <h5 className="text-[11px] font-black text-[#2c1810] uppercase mb-1">Ameliorate (v.)</h5>
               <p className="text-[10px] font-bold text-[#5d4037] mb-2">Meaning: To make something bad or unsatisfactory better.</p>
               <p className="text-sm italic">"Stricter traffic laws are intended to ameliorate the rise in accidents."</p>
             </div>
           </div>
           <div className="space-y-6">
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#d4af37]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#d4af37]">
               <h5 className="text-[11px] font-black text-[#8b4513] uppercase mb-1">Eradicate (v.)</h5>
               <p className="text-[10px] font-bold text-[#5d4037] mb-2">Meaning: To destroy or get rid of completely.</p>
               <p className="text-sm italic">"We must work together to eradicate the stigma surrounding mental health."</p>
             </div>
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#8b4513]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#8b4513]">
               <h5 className="text-[11px] font-black text-[#8b4513] uppercase mb-1">Engender (v.)</h5>
               <p className="text-[10px] font-bold text-[#5d4037] mb-2">Meaning: To cause or give rise to a feeling or situation.</p>
               <p className="text-sm italic">"Transparency in governance engenders trust among citizens."</p>
@@ -81,30 +81,30 @@ const Module6_AdvancedSkills: React.FC = () => {
       </div>
 
       {/* Punctuation Nuance */}
-      <div className="max-w-4xl mx-auto bg-white p-10 border border-[#dccab1] shadow-xl">
+      <div className="max-w-4xl mx-auto bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-xl">
         <h3 className="text-2xl font-bold text-[#2c1810] mb-8 uppercase tracking-tighter italic border-b pb-4">The Power of Punctuation</h3>
         <p className="text-sm text-[#8b4513] mb-8 font-serif italic">Advanced punctuation proves sophisticated control of language.</p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="space-y-4">
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#8b0000]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#8b0000]">
               <h5 className="text-[10px] font-black text-[#8b0000] uppercase mb-2">The Semi-colon (;)</h5>
               <p className="text-sm italic">"The Earth is not dying; it is being killed by our complacency."</p>
               <p className="text-[9px] mt-2 text-[#5d4037] uppercase font-bold">Used for: Connecting two related thoughts.</p>
             </div>
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#2c1810]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#2c1810]">
               <h5 className="text-[10px] font-black text-[#2c1810] uppercase mb-2">The Em-Dash (—)</h5>
               <p className="text-sm italic">"Technology—the very thing that connects us—has become our prison."</p>
               <p className="text-[9px] mt-2 text-[#5d4037] uppercase font-bold">Used for: Drama and emphasis.</p>
             </div>
           </div>
           <div className="space-y-4">
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#d4af37]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#d4af37]">
               <h5 className="text-[10px] font-black text-[#d4af37] uppercase mb-2">The Ellipsis (...)</h5>
               <p className="text-sm italic">"The silence in the forests is deafening..."</p>
               <p className="text-[9px] mt-2 text-[#5d4037] uppercase font-bold">Used for: Leaving a thought lingering.</p>
             </div>
-            <div className="p-4 bg-[#fdfbf7] border-l-4 border-[#8b4513]">
+            <div className="p-4 bg-[#f1ede4] border-l-4 border-[#8b4513]">
               <h5 className="text-[10px] font-black text-[#8b4513] uppercase mb-2">The Colon (:)</h5>
               <p className="text-sm italic">"The solution is simple: awareness."</p>
               <p className="text-[9px] mt-2 text-[#5d4037] uppercase font-bold">Used for: Introducing a list or summary.</p>
@@ -114,19 +114,19 @@ const Module6_AdvancedSkills: React.FC = () => {
       </div>
 
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-        <div className="bg-white p-10 border border-[#dccab1] shadow-xl">
+        <div className="bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-xl">
           <h3 className="text-2xl font-bold text-[#2c1810] mb-8 uppercase tracking-tighter italic border-b pb-4">Tone Modulation</h3>
           <p className="text-sm text-[#5d4037] mb-6 italic">Articles should be semi-formal. Avoid slang, but remain engaging.</p>
           <div className="space-y-4">
-             <div className="flex justify-between items-center text-xs border-b pb-2">
+             <div className="flex justify-between items-center text-xs border-b border-[#f1ede4] pb-2">
                <span className="text-red-500 line-through italic">"It's a bad thing."</span>
                <span className="text-green-600 font-bold italic">"It is a regrettable phenomenon."</span>
              </div>
-             <div className="flex justify-between items-center text-xs border-b pb-2">
+             <div className="flex justify-between items-center text-xs border-b border-[#f1ede4] pb-2">
                <span className="text-red-500 line-through italic">"Fix the roads."</span>
                <span className="text-green-600 font-bold italic">"Ameliorate the infrastructure."</span>
              </div>
-             <div className="flex justify-between items-center text-xs border-b pb-2">
+             <div className="flex justify-between items-center text-xs border-b border-[#f1ede4] pb-2">
                <span className="text-red-500 line-through italic">"A lot of problems."</span>
                <span className="text-green-600 font-bold italic">"A plethora of complications."</span>
              </div>
