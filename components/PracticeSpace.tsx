@@ -42,8 +42,16 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
   }, [feedback]);
 
   const handleReview = async () => {
+    // 1. Initial validation
     if (!userText.trim() || wordCount < 20) {
       alert("Please write at least 20 words so the examiner can provide meaningful feedback.");
+      return;
+    }
+
+    // 2. Key Presence Check - Using optional chaining for safety
+    const apiKey = process?.env?.API_KEY;
+    if (!apiKey || apiKey === "undefined") {
+      alert("Error: API Key is missing. If you just added it to Vercel, you must trigger a RE-DEPLOY for the changes to take effect.");
       return;
     }
 
@@ -51,8 +59,7 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
     setFeedback(null);
 
     try {
-      // Create fresh instance right before call as per guidelines
-      const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+      const ai = new GoogleGenAI({ apiKey });
       
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview', 
@@ -75,7 +82,7 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
             CRITICAL INSTRUCTIONS:
             - Grade strictly out of 5 marks.
             - Evaluate the QUALITY of the hook.
-            - Provide a suggested revision for the INTRO and explain the specific rhetorical technique used in your version (e.g. "I replaced your factual intro with a Vivid Scenario hook...").
+            - Provide a suggested revision for the INTRO and explain the specific rhetorical technique used in your version.
             - Return ONLY clean JSON.`
           }
         ],
@@ -115,7 +122,6 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
       });
 
       if (response.text) {
-        // Robust JSON extraction to handle any potential markdown wrapping
         let cleanText = response.text.trim();
         if (cleanText.startsWith('```')) {
             cleanText = cleanText.replace(/^```json\s*|```$/g, '');
@@ -125,10 +131,7 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
       }
     } catch (error: any) {
       console.error("AI Review failed:", error);
-      const msg = error.message?.includes("entity was not found") 
-        ? "API Key invalid or not found. Please ensure it is correctly set in your environment variables."
-        : "The examiner's red pen ran out of ink! Please check your internet connection or API Key settings.";
-      alert(msg);
+      alert(`The examiner's red pen ran out of ink! Error: ${error.message || "Unknown connection error"}`);
     } finally {
       setIsReviewing(false);
     }
@@ -153,7 +156,6 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
         <div className="lg:col-span-3 space-y-10">
-          {/* Editor Area */}
           <div className="bg-[#fdfbf7] p-8 md:p-12 border border-[#dccab1] shadow-2xl relative rounded-sm">
              <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-[#2c1810]/10 pointer-events-none"></div>
              
@@ -187,19 +189,17 @@ Start with a powerful hook... (Statistic, Question, or Scenario)"
                    <div className={`w-5 h-5 rounded-full border border-[#2c1810]/20 ${wordCount >= 120 && wordCount <= 150 ? 'bg-green-600' : wordCount > 150 ? 'bg-red-600' : 'bg-yellow-600'}`}></div>
                    <span className="text-xl font-black text-[#2c1810] tracking-tighter uppercase">{wordCount} / 150 WORDS</span>
                  </div>
-                 <p className="text-[10px] text-[#8b4513] font-bold uppercase italic tracking-widest">Ideal Range: 120 - 150 words</p>
                </div>
                <button 
                   onClick={handleReview}
                   disabled={isReviewing}
                   className={`px-16 py-6 bg-[#2c1810] text-[#fdfbf7] font-black uppercase tracking-widest hover:bg-[#3d2b1f] transition-all shadow-xl text-xs active:translate-y-1 ${isReviewing ? 'opacity-50 cursor-wait' : ''}`}
                 >
-                 {isReviewing ? 'Examiner is reviewing...' : 'SUBMIT TO RED PEN'}
+                 {isReviewing ? 'Reviewing...' : 'SUBMIT TO RED PEN'}
                </button>
              </div>
           </div>
 
-          {/* Feedback Display */}
           {feedback && (
             <div ref={feedbackRef} className="bg-[#fdfbf7] border-4 border-[#2c1810] p-8 md:p-14 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700 rounded-sm">
               <header className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 border-b-2 border-[#f1ede4] pb-10">
@@ -281,17 +281,10 @@ Start with a powerful hook... (Statistic, Question, or Scenario)"
                   </div>
                 </div>
               </div>
-
-              <div className="mt-20 text-center">
-                  <button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="text-[10px] font-black uppercase tracking-[0.4em] border-b-2 border-[#2c1810] pb-1 text-[#2c1810] hover:text-[#8b0000] hover:border-[#8b0000] transition-colors">
-                    Back to Top to Edit & Re-submit
-                  </button>
-              </div>
             </div>
           )}
         </div>
 
-        {/* Sidebar Tips */}
         <div className="lg:col-span-1 space-y-8">
           <div className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow-xl sticky top-28 rounded-sm">
             <h3 className="font-bold text-[#2c1810] mb-8 uppercase tracking-widest border-b border-[#dccab1] pb-4 flex items-center gap-3">
@@ -316,11 +309,6 @@ Start with a powerful hook... (Statistic, Question, or Scenario)"
                 </li>
               ))}
             </ul>
-
-            <div className="mt-12 p-6 bg-[#f1ede4] border-l-4 border-[#2c1810]">
-                <h4 className="text-[9px] font-black uppercase text-[#2c1810] mb-2">Vocabulary Tip</h4>
-                <p className="text-[11px] font-serif italic leading-relaxed text-[#5d4037]">Swap "Big problem" with <b>"Multifaceted systemic challenge"</b> to instantly boost Expression marks.</p>
-            </div>
           </div>
         </div>
       </div>
