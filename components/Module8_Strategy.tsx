@@ -34,6 +34,30 @@ const Module8_Strategy: React.FC = () => {
            </div>
         </div>
 
+        {/* Universal Filler Bank Section */}
+        <div className="bg-[#2c1810] p-10 shadow-2xl text-white">
+          <h3 className="text-2xl font-bold text-[#d4af37] mb-8 uppercase tracking-widest text-center italic">Universal Filler Bank</h3>
+          <p className="text-center text-xs text-[#dccab1] mb-10 font-serif">High-impact "Safety Net" sentences to use when you run out of ideas or need more word count.</p>
+          <div className="space-y-6">
+            <div className="p-4 bg-white/5 border border-white/10">
+              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To pad the Body Paragraph:</h4>
+              <p className="text-sm italic font-serif">"The repercussions of this trend are multifaceted, reverberating through various strata of our society and affecting both the individual and the collective."</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10">
+              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To bridge two ideas:</h4>
+              <p className="text-sm italic font-serif">"While the immediate consequences are glaringly obvious, the long-term fallout remains a mystery that warrants deeper introspection."</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10">
+              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To sound more authoritative:</h4>
+              <p className="text-sm italic font-serif">"One cannot turn a blind eye to the fact that [Topic] is not merely a temporary hurdle, but a systemic challenge requiring a paradigm shift in our approach."</p>
+            </div>
+            <div className="p-4 bg-white/5 border border-white/10">
+              <h4 className="text-[10px] font-black uppercase text-[#d4af37] mb-2">To transition to solutions:</h4>
+              <p className="text-sm italic font-serif">"While policies provide the necessary framework, the true catalyst for meaningful change remains a robust sense of individual and public accountability."</p>
+            </div>
+          </div>
+        </div>
+
         {/* Hall Hacks Section */}
         <div className="bg-[#fdfbf7] border-2 border-[#8b0000] p-10">
           <h3 className="text-2xl font-bold text-[#8b0000] mb-8 text-center uppercase tracking-widest italic">Hall Hacks: "In Case of Emergency"</h3>
@@ -61,7 +85,7 @@ const Module8_Strategy: React.FC = () => {
           <div className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow-xl">
             <h4 className="text-[#8b0000] font-black uppercase text-xs mb-4 tracking-widest">Golden Rule #1</h4>
             <p className="text-lg font-serif italic leading-relaxed">
-              <b>Finished > Perfect.</b> A structured article with 4 paragraphs always beats a poetic 2-paragraph fragment.
+              <b>Finished &gt; Perfect.</b> A structured article with 4 paragraphs always beats a poetic 2-paragraph fragment.
             </p>
           </div>
           <div className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow-xl">

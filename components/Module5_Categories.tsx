@@ -8,7 +8,11 @@ const CATEGORY_DATA = [
     icon: '🌍',
     tone: 'Serious, concerned, empathetic.',
     quote: '"The greatness of a nation is measured by how it treats its weakest members." — Gandhi',
-    hackLine: 'While society celebrates progress, few notice the growing crisis of [issue] silently destroying lives.',
+    hackLines: [
+      "While society celebrates progress, few notice the growing crisis of [issue] silently destroying lives.",
+      "The strength of our social fabric is tested not by its peaks, but by its ability to protect the vulnerable.",
+      "We build skyscrapers of prosperity, yet the foundations of our empathy towards [issue] remain dangerously weak."
+    ],
     mustKnow: [
       { topic: 'Road Safety', fact: 'Distracted driving (mobile phones) and lack of traffic discipline account for 30% of accidents.', vocab: 'Traffic mortality (death rate on roads), Reckless driving (careless or dangerous), Compliance (following rules).' },
       { topic: 'Elder Abuse', fact: 'Recent reports suggest elder abuse in urban nuclear families is on a sharp rise.', vocab: 'Filial (relating to children), Emotional neglect (lack of care), Financial dependence (relying on others for money).' },
@@ -21,7 +25,11 @@ const CATEGORY_DATA = [
     icon: '🍃',
     tone: 'Urgent, scientific, hopeful.',
     quote: '"We do not inherit the Earth from our ancestors; we borrow it from our children."',
-    hackLine: 'The convenience of a 5-minute plastic use creates a 500-year legacy of pollution.',
+    hackLines: [
+      "The convenience of a 5-minute plastic use creates a 500-year legacy of pollution.",
+      "Nature is not a commodity to be exploited, but a heritage to be protected; our survival depends on this shift.",
+      "The silence of our forests and the smog in our lungs are nature's loudest warnings that time is running out."
+    ],
     mustKnow: [
       { topic: 'Plastic Pollution', fact: 'Single-use plastics are the single biggest threat to marine ecosystems today.', vocab: 'Biodegradable (decay naturally), Ocean contamination (pollution of seas), Aquatic ecosystems (water habitats).' },
       { topic: 'Water Crisis', fact: 'Rainwater harvesting is the only sustainable solution for depleting groundwater levels.', vocab: 'Aquifer (underground water source), Depletion (running out), Sustainability (able to be maintained).' },
@@ -34,7 +42,11 @@ const CATEGORY_DATA = [
     icon: '🎓',
     tone: 'Empathetic, analytical, firm.',
     quote: '"Education is not the filling of a pail, but the lighting of a fire." — W.B. Yeats',
-    hackLine: 'Success is not measured by marks alone, but by the balance one finds in a holistic life.',
+    hackLines: [
+      "Success is not measured by marks alone, but by the balance one finds in a holistic life.",
+      "We are training a generation of excellent test-takers, but are we raising empathetic and creative human beings?",
+      "The classroom of the future must prioritize critical thinking over rote memorization if we are to survive the age of AI."
+    ],
     mustKnow: [
       { topic: 'Balancing Life', fact: 'Academic success is hollow without the development of time management and creativity.', vocab: 'Holistic (all-round growth), Extracurricular (outside academics), Time management (using time well).' },
       { topic: 'Dying Art of Reading', fact: 'In the digital age, attention spans are shrinking as library culture declines.', vocab: 'Digital distractions (tech interruptions), Inculcating (fixing an idea by repetition), Vocabulary (range of words).' },
@@ -47,7 +59,11 @@ const CATEGORY_DATA = [
     icon: '🤖',
     tone: 'Balanced, critical, contemporary.',
     quote: '"Technology is a useful servant but a dangerous master." — Christian Lous Lange',
-    hackLine: 'We are connected to the world via screens, yet increasingly isolated from our neighbors.',
+    hackLines: [
+      "We are connected to the world via screens, yet increasingly isolated from our neighbors.",
+      "Digital convenience must not come at the cost of human connection and cognitive focus.",
+      "Technology is moving at a pace that our ethics and laws are struggling to match."
+    ],
     mustKnow: [
       { topic: 'Artificial Intelligence', fact: 'AI offers massive automation benefits but raises job displacement and ethical concerns.', vocab: 'Automation (use of machines), Displacement (taking the place of), Ethical considerations (moral questions).' },
       { topic: 'Online Shopping', fact: 'The convenience of variety is often balanced by the pitfalls of fake products and impulsive buying.', vocab: 'Conscious consumerism (buying with thought), Impulsive buying (buying without thinking), Price comparison (checking costs).' },
@@ -60,7 +76,11 @@ const CATEGORY_DATA = [
     icon: '🧘',
     tone: 'Motivational, cautionary, serious.',
     quote: '"He who has health has hope; and he who has hope has everything."',
-    hackLine: 'Our bodies are temples, not warehouses for junk food and sedentary habits.',
+    hackLines: [
+      "Our bodies are temples, not warehouses for junk food and sedentary habits.",
+      "While we chase professional success, we often sacrifice the very physical vitality required to enjoy it.",
+      "Mental health is not a luxury; it is the fundamental infrastructure of a successful life."
+    ],
     mustKnow: [
       { topic: 'Childhood Obesity', fact: 'Sedentary lifestyles and junk food are leading to early-onset diabetes in children.', vocab: 'Sedentary (mostly sitting), Metabolic (relating to body energy), Parental role modeling (setting an example).' },
       { topic: 'Yoga & Meditation', fact: 'Yoga is the ancient science that provides holistic wellness for modern academic stress.', vocab: 'Concentration (focus), Holistic wellness (total health), Stress management (handling pressure).' },
@@ -73,7 +93,11 @@ const CATEGORY_DATA = [
     icon: '⚖️',
     tone: 'Philosophical, reflective, stern.',
     quote: '"Honesty is the first chapter in the book of wisdom." — Thomas Jefferson',
-    hackLine: 'Character is built when we choose the hard right over the easy wrong.',
+    hackLines: [
+      "Character is built when we choose the hard right over the easy wrong.",
+      "Values are not what we say in speeches, but what we do when no one is watching.",
+      "Integrity is the compass that keeps a society from drifting into the chaos of selfishness."
+    ],
     mustKnow: [
       { topic: 'Cleanliness', fact: 'Swachh Bharat is more than a mission; it is a display of civic sense and disease prevention.', vocab: 'Civic sense (responsibility to society), Hygiene (cleanliness), Proliferation (rapid increase).' },
       { topic: 'Honesty', fact: 'The lost value of honesty leads to academic and workplace shortcuts with long-term fallout.', vocab: 'Integrity (being honest), Character building (developing morals), Shortcuts (quick but poor ways).' },
@@ -86,7 +110,11 @@ const CATEGORY_DATA = [
     icon: '🗞️',
     tone: 'Informed, patriotic, constructive.',
     quote: '"Nation-building is a relay race; each individual must run their part."',
-    hackLine: 'Government initiatives provide the roadmap, but citizens must provide the engine.',
+    hackLines: [
+      "Government initiatives provide the roadmap, but citizens must provide the engine.",
+      "Patriotism isn't just a sentiment for holidays; it's a commitment to daily responsibility.",
+      "A nation's progress is measured not just by its GDP, but by the dignity it affords its citizens."
+    ],
     mustKnow: [
       { topic: 'Skill India', fact: 'Only 5% of India\'s workforce is formally skilled, making employability a major gap.', vocab: 'Employability (possession of qualities for work), Vocational (practical skills), Grassroots (most basic level).' },
       { topic: 'Women Safety', fact: 'Women safety requires moving beyond legal frameworks to a deep cultural change.', vocab: 'Legal framework (system of laws), Societal attitudes (how society thinks), Empowerment (giving power).' },
@@ -138,7 +166,11 @@ const Module5_Categories: React.FC = () => {
               </div>
               <div className="p-6 bg-[#fdfbf7] border-l-8 border-[#2c1810] shadow-sm italic text-lg font-serif">
                 <h4 className="text-[10px] font-black uppercase text-[#2c1810] mb-3">Hack Line (The Hook)</h4>
-                "{currentCat.hackLine}"
+                <ul className="space-y-4">
+                  {currentCat.hackLines.map((line, idx) => (
+                    <li key={idx} className="text-base leading-snug">"{line}"</li>
+                  ))}
+                </ul>
               </div>
             </div>
 

@@ -56,24 +56,24 @@ const Module2_Introductions: React.FC = () => {
 
       {/* Universal Openers Section */}
       <div className="max-w-5xl mx-auto bg-[#fdfbf7] border-2 border-[#2c1810] p-10">
-        <h3 className="text-2xl font-bold text-[#2c1810] mb-8 text-center uppercase tracking-widest">Universal "Hack" Openers</h3>
-        <p className="text-center text-sm italic text-[#8b4513] mb-8">Memorize these for when you're stuck in the exam hall.</p>
+        <h3 className="text-2xl font-bold text-[#2c1810] mb-8 text-center uppercase tracking-widest">The Instant Opener Bank</h3>
+        <p className="text-center text-sm italic text-[#8b4513] mb-8">Four "Safety Net" sentences that work for almost any exam topic.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-4 border border-[#dccab1] bg-white">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Progress/Tech:</h4>
-            <p className="text-sm italic font-serif">"While humanity stands at the zenith of technological prowess, we seem to be plummeting to the nadir of [topic]..."</p>
+          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Paradox" Opener:</h4>
+            <p className="text-sm italic font-serif">"It is a startling paradox that in an era defined by [Technology/Progress], we are witnessing a tragic disintegration of [Topic/Value]."</p>
           </div>
-          <div className="p-4 border border-[#dccab1] bg-white">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Social Crisis:</h4>
-            <p className="text-sm italic font-serif">"It is a startling irony that in an era of unprecedented connectivity, we are witnessing a tragic disintegration of [topic]..."</p>
+          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Social Fabric" Opener:</h4>
+            <p className="text-sm italic font-serif">"The very fabric of our society is being frayed by the relentless tide of [Topic], a trend that threatens to derail our collective future."</p>
           </div>
-          <div className="p-4 border border-[#dccab1] bg-white">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Values/Ethics:</h4>
-            <p className="text-sm italic font-serif">"The fabric of our society is woven with values that are currently being frayed by the relentless tide of [topic]..."</p>
+          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Mirror" Opener:</h4>
+            <p className="text-sm italic font-serif">"A nation's greatness is often reflected in how it handles [Topic]; currently, however, that mirror reflects a troubling reality of neglect."</p>
           </div>
-          <div className="p-4 border border-[#dccab1] bg-white">
-            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Environmental:</h4>
-            <p className="text-sm italic font-serif">"Nature does not speak in words; it speaks in catastrophes. The silence of [topic] is the loudest warning we have..."</p>
+          <div className="p-4 border border-[#dccab1] bg-white hover:border-[#8b0000] transition-colors">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">The "Urgency" Opener:</h4>
+            <p className="text-sm italic font-serif">"While we discuss [Topic] as a distant concern, the reality is that the clock is ticking, and the fallout of our inaction is already visible."</p>
           </div>
         </div>
       </div>
