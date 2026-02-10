@@ -113,7 +113,7 @@ const App: React.FC = () => {
                 Inkly<span className="text-[#8b0000]">.</span>
               </h1>
               <p className="text-xl md:text-2xl text-[#5d4037] mb-12 leading-relaxed font-serif italic max-w-3xl mx-auto">
-                Step-by-step mastery for the perfect 5/5. High-impact vocabulary, time-blitz strategies, and exhaustive cheatsheets.
+                Step-by-step mastery for the perfect 5/5 in Article Writing. High-impact vocabulary, time-blitz strategies, and exhaustive cheatsheets.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <button onClick={() => navigateTo('lessons')} className="px-12 py-4 bg-[#2c1810] text-[#fdfbf7] font-bold text-lg hover:bg-[#3d2b1f] transition-all border border-[#2c1810] shadow-xl">
