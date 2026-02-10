@@ -184,7 +184,7 @@ Start with a powerful hook... (Statistic, Question, or Scenario)"
              <div className="flex flex-col sm:flex-row justify-between items-center mt-10 gap-6">
                <div className="flex flex-col gap-2">
                  <div className="flex items-center gap-4">
-                   <div className={`w-5 h-5 rounded-full border border-[#2c1810]/20 ${wordCount >= 120 && wordCount <= 200 ? 'bg-green-600' : wordCount > 200 ? 'bg-red-600' : 'bg-yellow-600'}`}></div>
+                   <div className={`w-5 h-5 rounded-full border border-[#2c1810]/20 ${wordCount >= 120 && wordCount <= 150 ? 'bg-green-600' : wordCount > 150 ? 'bg-red-600' : 'bg-yellow-600'}`}></div>
                    <span className="text-xl font-black text-[#2c1810] tracking-tighter uppercase">{wordCount} / 150 WORDS</span>
                  </div>
                  <p className="text-[10px] text-[#8b4513] font-bold uppercase italic tracking-widest">Ideal Range: 120 - 150 words</p>
