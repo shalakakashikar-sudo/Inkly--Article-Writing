@@ -3,7 +3,7 @@ import React from 'react';
 
 const Module4_Conclusions: React.FC = () => {
   return (
-    <div className="space-y-20 animate-in fade-in duration-700 pb-20">
+    <div className="space-y-20 animate-in fade-in duration-700 pb-20 px-4">
       <header className="text-center max-w-4xl mx-auto">
         <h2 className="text-6xl font-bold text-[#2c1810] mb-6 italic">Powerful Closures</h2>
         <p className="text-2xl text-[#5d4037] leading-relaxed italic">A weak conclusion ruins a strong article. Your final 50 words must leave the reader thinking.</p>
@@ -63,16 +63,6 @@ const Module4_Conclusions: React.FC = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="bg-[#f1ede4] p-10 border border-[#dccab1] max-w-4xl mx-auto text-center">
-        <h4 className="text-sm font-black text-[#8b0000] uppercase mb-4 tracking-widest">The "Don't" List</h4>
-        <div className="flex flex-wrap justify-center gap-8">
-           <span className="text-base font-bold text-[#5d4037] line-through decoration-[#8b0000] decoration-2">"In conclusion..."</span>
-           <span className="text-base font-bold text-[#5d4037] line-through decoration-[#8b0000] decoration-2">"To sum up..."</span>
-           <span className="text-base font-bold text-[#5d4037] line-through decoration-[#8b0000] decoration-2">Introducing new info</span>
-           <span className="text-base font-bold text-[#5d4037] line-through decoration-[#8b0000] decoration-2">Apologizing for your opinion</span>
-        </div>
       </div>
     </div>
   );

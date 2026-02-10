@@ -34,6 +34,29 @@ const Module8_Strategy: React.FC = () => {
            </div>
         </div>
 
+        {/* Hall Hacks Section */}
+        <div className="bg-[#fdfbf7] border-2 border-[#8b0000] p-10">
+          <h3 className="text-2xl font-bold text-[#8b0000] mb-8 text-center uppercase tracking-widest italic">Hall Hacks: "In Case of Emergency"</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             <div className="space-y-4">
+               <h4 className="text-xs font-black uppercase text-[#2c1810] border-b pb-2">Stuck on a Hook?</h4>
+               <p className="text-sm font-serif italic">Use the <b>"Universal Rhetorical Question"</b>: "Is it not a tragic irony that in a world of [Ideal], we are witnessing [Problem]?" This works for 90% of topics.</p>
+             </div>
+             <div className="space-y-4">
+               <h4 className="text-xs font-black uppercase text-[#2c1810] border-b pb-2">Out of Time?</h4>
+               <p className="text-sm font-serif italic">Prioritize the <b>Title, Byline, and Para 1</b>. Even a truncated article with a perfect format can secure 2-3 marks. <b>Never skip format.</b></p>
+             </div>
+             <div className="space-y-4">
+               <h4 className="text-xs font-black uppercase text-[#2c1810] border-b pb-2">Blanking on Vocab?</h4>
+               <p className="text-sm font-serif italic">Think of the word's "weight." Instead of "bad," use "critical." Instead of "good," use "vital." Simply upgrading common adjectives secures expression marks.</p>
+             </div>
+             <div className="space-y-4">
+               <h4 className="text-xs font-black uppercase text-[#2c1810] border-b pb-2">Weak Body?</h4>
+               <p className="text-sm font-serif italic">Force a transition: Start Para 3 with <b>"Conversely,"</b> even if the contrast is small. It forces logical structure into your writing.</p>
+             </div>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow-xl">
             <h4 className="text-[#8b0000] font-black uppercase text-xs mb-4 tracking-widest">Golden Rule #1</h4>

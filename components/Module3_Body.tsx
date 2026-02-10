@@ -3,7 +3,7 @@ import React from 'react';
 
 const Module3_Body: React.FC = () => {
   return (
-    <div className="space-y-20 animate-in fade-in duration-700 pb-20">
+    <div className="space-y-20 animate-in fade-in duration-700 pb-20 px-4">
       <header className="text-center max-w-4xl mx-auto">
         <h2 className="text-6xl font-bold text-[#2c1810] mb-6 italic">Building the Argument</h2>
         <p className="text-2xl text-[#5d4037] leading-relaxed italic">Think of your body paragraphs as answering three vital questions: WHAT, WHY, and HOW.</p>
@@ -38,10 +38,10 @@ const Module3_Body: React.FC = () => {
         </div>
         <div className="p-12 space-y-10">
           {[
-            { letter: "P", name: "Point", desc: "State the main point of this paragraph clearly." },
-            { letter: "E", name: "Explanation", desc: "Elaborate on the point. Use 2-3 sentences to develop the idea." },
-            { letter: "E", name: "Example/Evidence", desc: "Connect to a real-world statistic, fact, or specific scenario." },
-            { letter: "L", name: "Link", desc: "Connect the idea back to your overall topic or the next point." }
+            { letter: "P", name: "Point", desc: "State the main point of this paragraph clearly. Use a 'Topic Sentence'." },
+            { letter: "E", name: "Explanation", desc: "Elaborate on the point. Use 2-3 sentences to develop the logic behind the problem." },
+            { letter: "E", name: "Example/Evidence", desc: "Connect to a real-world statistic, fact, or specific scenario. Makes it believable." },
+            { letter: "L", name: "Link", desc: "Connect the idea back to your overall topic or set up the next paragraph." }
           ].map((item, i) => (
             <div key={i} className="flex gap-8 items-start group">
               <div className="w-12 h-12 bg-[#8b0000] text-white rounded-full flex items-center justify-center text-xl font-black flex-shrink-0 group-hover:scale-110 transition-transform">{item.letter}</div>
@@ -52,31 +52,13 @@ const Module3_Body: React.FC = () => {
             </div>
           ))}
           
-          <div className="mt-12 p-8 bg-[#2c1810] text-[#fdfbf7] rounded-sm">
+          <div className="mt-12 p-8 bg-[#2c1810] text-[#fdfbf7] rounded-sm relative">
+            <div className="absolute top-2 right-2 text-[8px] font-black uppercase tracking-widest text-[#d4af37]/50">Example</div>
             <h4 className="font-bold text-[#d4af37] mb-4 uppercase text-xs">A Balanced Paragraph Example:</h4>
             <p className="text-xl font-serif italic leading-loose">
               "The impact of social media on teenage mental health cannot be ignored. [POINT] Recent studies reveal that teens spending more than three hours daily on social platforms show significantly higher rates of anxiety. [EVIDENCE] This constant exposure to curated, idealized versions of others' lives creates feelings of inadequacy. [EXPLANATION] When a student sees perfect highlight reels, their own life feels insufficient by comparison. [LINK]"
             </p>
           </div>
-        </div>
-      </div>
-
-      <div className="max-w-4xl mx-auto">
-        <h3 className="text-3xl font-bold text-[#2c1810] mb-8 text-center italic">The Transition Matrix</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
-            { cat: "Addition", words: "Furthermore, Moreover, Additionally, Similarly" },
-            { cat: "Contrast", words: "However, Nevertheless, On the other hand, Conversely" },
-            { cat: "Cause/Effect", words: "Therefore, Consequently, As a result, Thus" },
-            { cat: "Examples", words: "For instance, Specifically, To illustrate" },
-            { cat: "Emphasis", words: "Indeed, In fact, Clearly, Significantly" },
-            { cat: "Conclusion", words: "Ultimately, Essentially, In a nutshell" }
-          ].map((item, i) => (
-            <div key={i} className="p-6 bg-white border border-[#dccab1] shadow hover:border-[#8b0000] transition-all">
-              <h4 className="font-bold text-[#8b0000] mb-2 uppercase text-[10px] tracking-widest">{item.cat}</h4>
-              <p className="text-lg font-serif italic text-[#2c1810]">{item.words}</p>
-            </div>
-          ))}
         </div>
       </div>
     </div>

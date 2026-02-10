@@ -3,7 +3,7 @@ import React from 'react';
 
 const Module2_Introductions: React.FC = () => {
   return (
-    <div className="space-y-20 animate-in fade-in duration-700 pb-20">
+    <div className="space-y-20 animate-in fade-in duration-700 pb-20 px-4">
       <header className="text-center max-w-4xl mx-auto">
         <h2 className="text-6xl font-bold text-[#2c1810] mb-6 italic">Mastering the Hook</h2>
         <p className="text-2xl text-[#5d4037] leading-relaxed italic">The first paragraph is where you win or lose your reader. Stop saying "Pollution is a big problem" and start showing why it matters.</p>
@@ -14,29 +14,36 @@ const Module2_Introductions: React.FC = () => {
           {
             title: "Strategy 1: The Shocking Statistic",
             formula: "[Startling number] + [What it means] + [Why it matters]",
-            example: "\"Six hours. That's how long the average teenager spends glued to a screen each day—time that could build skills, relationships, or dreams, now lost to infinite scrolling.\""
+            example: "\"Six hours. That's how long the average teenager spends glued to a screen each day—time that could build skills, relationships, or dreams, now lost to infinite scrolling.\"",
+            tip: "Always interpret the number. Don't just list it."
           },
           {
             title: "Strategy 2: The Provocative Question",
             formula: "Ask something that challenges assumptions or makes readers think",
-            example: "\"What if everything we know about successful education is wrong? What if grades and rote memorization are creating an entire generation of skilled test-takers but poor thinkers?\""
+            example: "\"What if everything we know about successful education is wrong? What if grades and rote memorization are creating an entire generation of skilled test-takers but poor thinkers?\"",
+            tip: "The question should lead directly to your stance."
           },
           {
             title: "Strategy 3: The Vivid Scenario",
             formula: "Paint a picture that readers can see, feel, or smell",
-            example: "\"Picture this: It's 7 AM in Delhi. A mother ties a pollution mask around her six-year-old's face before sending her to school. This isn't a scene from a dystopian novel—it's everyday reality.\""
+            example: "\"Picture this: It's 7 AM in Delhi. A mother ties a pollution mask around her six-year-old's face before sending her to school. This isn't a scene from a dystopian novel—it's everyday reality.\"",
+            tip: "Use sensory details (mask, cough, smog)."
           },
           {
-            title: "Strategy 4: The Bold Declaration",
-            formula: "Make a strong, controversial statement that demands attention",
-            example: "\"Homework doesn't make students smarter—it makes them stressed, sleep-deprived, and resentful of learning. It's time we abolish this antiquated burden.\""
+            title: "Strategy 4: The Bold Contrast",
+            formula: "The [Ideal State] vs The [Current Reality]",
+            example: "\"We live in an age where we can reach the moon in days, yet it takes months for a single piece of legislation to protect our streets from potholes. This irony is the defining crisis of our modern infrastructure.\"",
+            tip: "Great for highlighting government or civic failures."
           }
         ].map((item, i) => (
-          <div key={i} className="bg-white border border-[#dccab1] shadow-xl overflow-hidden flex flex-col md:flex-row">
+          <div key={i} className="bg-white border border-[#dccab1] shadow-xl overflow-hidden flex flex-col md:flex-row group hover:border-[#8b0000] transition-colors">
             <div className="md:w-1/3 bg-[#8b0000] p-10 text-white flex flex-col justify-center">
               <h3 className="text-xl font-bold uppercase tracking-tighter mb-4">{item.title}</h3>
               <p className="text-[10px] font-black uppercase tracking-widest text-white/50 mb-2">The Formula</p>
-              <p className="text-sm italic text-[#f1ede4]">{item.formula}</p>
+              <p className="text-sm italic text-[#f1ede4] mb-4">{item.formula}</p>
+              <div className="bg-white/10 p-2 text-[9px] font-bold uppercase tracking-widest">
+                TIP: {item.tip}
+              </div>
             </div>
             <div className="md:w-2/3 p-10 bg-white flex flex-col justify-center">
               <div className="p-8 bg-[#fdfbf7] border-l-4 border-[#2c1810] font-serif text-2xl leading-relaxed text-[#3d2b1f] italic shadow-inner">
@@ -45,6 +52,30 @@ const Module2_Introductions: React.FC = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Universal Openers Section */}
+      <div className="max-w-5xl mx-auto bg-[#fdfbf7] border-2 border-[#2c1810] p-10">
+        <h3 className="text-2xl font-bold text-[#2c1810] mb-8 text-center uppercase tracking-widest">Universal "Hack" Openers</h3>
+        <p className="text-center text-sm italic text-[#8b4513] mb-8">Memorize these for when you're stuck in the exam hall.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-4 border border-[#dccab1] bg-white">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Progress/Tech:</h4>
+            <p className="text-sm italic font-serif">"While humanity stands at the zenith of technological prowess, we seem to be plummeting to the nadir of [topic]..."</p>
+          </div>
+          <div className="p-4 border border-[#dccab1] bg-white">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Social Crisis:</h4>
+            <p className="text-sm italic font-serif">"It is a startling irony that in an era of unprecedented connectivity, we are witnessing a tragic disintegration of [topic]..."</p>
+          </div>
+          <div className="p-4 border border-[#dccab1] bg-white">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Values/Ethics:</h4>
+            <p className="text-sm italic font-serif">"The fabric of our society is woven with values that are currently being frayed by the relentless tide of [topic]..."</p>
+          </div>
+          <div className="p-4 border border-[#dccab1] bg-white">
+            <h4 className="text-[10px] font-black uppercase text-[#8b0000] mb-2">For Environmental:</h4>
+            <p className="text-sm italic font-serif">"Nature does not speak in words; it speaks in catastrophes. The silence of [topic] is the loudest warning we have..."</p>
+          </div>
+        </div>
       </div>
 
       <div className="bg-[#2c1810] p-16 text-white max-w-5xl mx-auto shadow-2xl relative">

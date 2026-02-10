@@ -99,36 +99,36 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto space-y-10 animate-in fade-in duration-700 mb-32 px-4">
-      <div className="flex items-center gap-6 mb-8">
+    <div className="max-w-[1440px] mx-auto space-y-12 animate-in fade-in duration-700 mb-32 px-6">
+      <div className="flex items-center gap-8 mb-10">
         <button 
           onClick={onBack}
-          className="bg-transparent border-2 border-[#2c1810] p-2 hover:bg-[#2c1810] hover:text-[#fdfbf7] transition-all"
+          className="bg-transparent border-2 border-[#2c1810] p-3 hover:bg-[#2c1810] hover:text-[#fdfbf7] transition-all"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <div>
-          <h2 className="text-3xl font-bold text-[#2c1810] italic">Writing Practice</h2>
-          <p className="text-[#8b4513] text-xs font-bold uppercase tracking-[0.3em] mt-1">Question Set #{question.id}</p>
+          <h2 className="text-4xl font-bold text-[#2c1810] italic">Writing Practice</h2>
+          <p className="text-[#8b4513] text-sm font-bold uppercase tracking-[0.3em] mt-1">Question Set #{question.id}</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
         {/* Editor Area */}
-        <div className="lg:col-span-2 space-y-8">
-          <div className="bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-2xl relative">
-             <div className="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-[#2c1810]/20 pointer-events-none"></div>
+        <div className="lg:col-span-3 space-y-10">
+          <div className="bg-[#fdfbf7] p-12 border border-[#dccab1] shadow-2xl relative">
+             <div className="absolute top-0 right-0 w-32 h-32 border-t-2 border-r-2 border-[#2c1810]/20 pointer-events-none"></div>
              
-             <div className="mb-8 p-6 bg-[#f1ede4] border-l-4 border-[#8b0000]">
-               <h3 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#8b4513] mb-3">The Question</h3>
-               <div className="text-[#2c1810] font-serif text-xl leading-relaxed italic">"{question.questionText}"</div>
+             <div className="mb-10 p-8 bg-[#f1ede4] border-l-8 border-[#8b0000]">
+               <h3 className="text-[12px] font-black uppercase tracking-[0.4em] text-[#8b4513] mb-4">The Question</h3>
+               <div className="text-[#2c1810] font-serif text-2xl leading-relaxed italic">"{question.questionText}"</div>
              </div>
 
-             <div className="flex flex-wrap gap-2 mb-8">
+             <div className="flex flex-wrap gap-3 mb-10">
                {question.cues.map((c, i) => (
-                 <span key={i} className="bg-transparent border border-[#dccab1] text-[#8b4513] text-[9px] px-3 py-1 font-black uppercase tracking-widest">
+                 <span key={i} className="bg-transparent border border-[#dccab1] text-[#8b4513] text-xs px-4 py-1.5 font-black uppercase tracking-widest">
                    {c}
                  </span>
                ))}
@@ -138,22 +138,22 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
                value={userText}
                onChange={(e) => setUserText(e.target.value)}
                placeholder="Draft your article here... Start with a centered Title and Byline."
-               className="w-full h-[500px] p-10 bg-[#fdfbf7] border-2 border-[#dccab1] focus:border-[#2c1810] focus:outline-none text-[#2c1810] font-serif text-xl leading-loose shadow-inner parchment-texture resize-none"
+               className="w-full h-[600px] p-12 bg-[#fdfbf7] border-2 border-[#dccab1] focus:border-[#2c1810] focus:outline-none text-[#2c1810] font-serif text-2xl leading-loose shadow-inner parchment-texture resize-none"
                disabled={isReviewing}
              />
              
-             <div className="flex justify-between items-center mt-8">
-               <div className="flex flex-col gap-1">
-                 <div className="flex items-center gap-3">
-                   <div className={`w-4 h-4 rounded-full border border-[#2c1810]/20 ${wordCount >= 120 && wordCount <= 200 ? 'bg-[#228b22]' : wordCount > 200 ? 'bg-[#8b0000]' : 'bg-[#b8860b]'}`}></div>
-                   <span className="text-sm font-black text-[#2c1810] tracking-widest uppercase">{wordCount} WORDS</span>
+             <div className="flex justify-between items-center mt-10">
+               <div className="flex flex-col gap-2">
+                 <div className="flex items-center gap-4">
+                   <div className={`w-5 h-5 rounded-full border border-[#2c1810]/20 ${wordCount >= 120 && wordCount <= 200 ? 'bg-[#228b22]' : wordCount > 200 ? 'bg-[#8b0000]' : 'bg-[#b8860b]'}`}></div>
+                   <span className="text-lg font-black text-[#2c1810] tracking-widest uppercase">{wordCount} WORDS</span>
                  </div>
-                 <p className="text-[9px] text-[#8b4513] font-bold uppercase italic tracking-widest">Target: 120-150 (Practice range: up to 200)</p>
+                 <p className="text-xs text-[#8b4513] font-bold uppercase italic tracking-widest">Target: 120-150 (Practice range: up to 200)</p>
                </div>
                <button 
                   onClick={handleReview}
                   disabled={isReviewing}
-                  className={`px-8 py-4 bg-[#8b0000] text-[#fdfbf7] font-bold uppercase tracking-widest hover:bg-[#a00000] transition-all shadow-lg text-xs ${isReviewing ? 'opacity-50' : ''}`}
+                  className={`px-12 py-5 bg-[#8b0000] text-[#fdfbf7] font-bold uppercase tracking-widest hover:bg-[#a00000] transition-all shadow-lg text-sm ${isReviewing ? 'opacity-50' : ''}`}
                 >
                  {isReviewing ? 'Examiner is Reading...' : 'Use Red Pen'}
                </button>
@@ -162,53 +162,53 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
 
           {/* Feedback Section */}
           {feedback && (
-            <div className="bg-white border-2 border-[#2c1810] p-10 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
-              <div className="flex justify-between items-start mb-10 border-b-2 border-[#f1ede4] pb-6">
+            <div className="bg-white border-2 border-[#2c1810] p-12 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700">
+              <div className="flex justify-between items-start mb-12 border-b-2 border-[#f1ede4] pb-8">
                 <div>
-                  <h3 className="text-3xl font-bold text-[#2c1810] italic">The Red Pen Review</h3>
-                  <p className="text-[#8b4513] text-[10px] font-black uppercase tracking-widest mt-1">Official Script Evaluation</p>
+                  <h3 className="text-4xl font-bold text-[#2c1810] italic">The Red Pen Review</h3>
+                  <p className="text-[#8b4513] text-[12px] font-black uppercase tracking-widest mt-1">Official Script Evaluation</p>
                 </div>
-                <div className="text-center bg-[#8b0000] text-white px-6 py-2 rounded-sm shadow-xl">
-                  <div className="text-4xl font-black">{feedback.marks.total}/5</div>
-                  <div className="text-[8px] font-black uppercase tracking-[0.2em]">Marks Secured</div>
+                <div className="text-center bg-[#8b0000] text-white px-8 py-3 rounded-sm shadow-xl">
+                  <div className="text-5xl font-black">{feedback.marks.total}/5</div>
+                  <div className="text-[10px] font-black uppercase tracking-[0.2em]">Marks Secured</div>
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                <div className="p-6 border border-[#dccab1] bg-[#fdfbf7] text-center">
-                  <h5 className="text-[10px] font-black uppercase text-[#8b4513] mb-2">Format</h5>
-                  <div className="text-2xl font-bold">{feedback.marks.format}/1</div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div className="p-8 border border-[#dccab1] bg-[#fdfbf7] text-center">
+                  <h5 className="text-[12px] font-black uppercase text-[#8b4513] mb-3">Format</h5>
+                  <div className="text-3xl font-bold">{feedback.marks.format}/1</div>
                 </div>
-                <div className="p-6 border border-[#dccab1] bg-[#fdfbf7] text-center">
-                  <h5 className="text-[10px] font-black uppercase text-[#8b4513] mb-2">Content</h5>
-                  <div className="text-2xl font-bold">{feedback.marks.content}/2</div>
+                <div className="p-8 border border-[#dccab1] bg-[#fdfbf7] text-center">
+                  <h5 className="text-[12px] font-black uppercase text-[#8b4513] mb-3">Content</h5>
+                  <div className="text-3xl font-bold">{feedback.marks.content}/2</div>
                 </div>
-                <div className="p-6 border border-[#dccab1] bg-[#fdfbf7] text-center">
-                  <h5 className="text-[10px] font-black uppercase text-[#8b4513] mb-2">Expression</h5>
-                  <div className="text-2xl font-bold">{feedback.marks.expression}/2</div>
+                <div className="p-8 border border-[#dccab1] bg-[#fdfbf7] text-center">
+                  <h5 className="text-[12px] font-black uppercase text-[#8b4513] mb-3">Expression</h5>
+                  <div className="text-3xl font-bold">{feedback.marks.expression}/2</div>
                 </div>
               </div>
 
-              <div className="space-y-10">
+              <div className="space-y-12">
                 <div>
-                  <h4 className="text-[11px] font-black uppercase tracking-[0.4em] text-[#2c1810] mb-6 flex items-center gap-3">
-                    <span className="w-8 h-[2px] bg-[#8b0000]"></span>
+                  <h4 className="text-[13px] font-black uppercase tracking-[0.4em] text-[#2c1810] mb-8 flex items-center gap-4">
+                    <span className="w-12 h-[2px] bg-[#8b0000]"></span>
                     Critical Comments
                   </h4>
-                  <ul className="space-y-4">
+                  <ul className="space-y-6">
                     {feedback.comments.map((comment, i) => (
-                      <li key={i} className="flex gap-4 items-start text-lg font-serif italic text-[#3d2b1f]">
-                        <span className="text-[#8b0000] font-black text-2xl">•</span>
+                      <li key={i} className="flex gap-5 items-start text-xl font-serif italic text-[#3d2b1f]">
+                        <span className="text-[#8b0000] font-black text-3xl">•</span>
                         {comment}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="p-10 bg-[#2c1810] text-[#fdfbf7] relative">
-                  <div className="absolute top-0 right-0 w-16 h-16 border-t border-r border-[#d4af37]/40 -mr-2 -mt-2"></div>
-                  <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-[#d4af37] mb-6">Master Suggestion</h4>
-                  <p className="text-xl font-serif italic leading-relaxed text-[#fdfbf7]/90 italic">
+                <div className="p-12 bg-[#2c1810] text-[#fdfbf7] relative">
+                  <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-[#d4af37]/40 -mr-3 -mt-3"></div>
+                  <h4 className="text-[12px] font-black uppercase tracking-[0.4em] text-[#d4af37] mb-8">Master Suggestion</h4>
+                  <p className="text-2xl font-serif italic leading-relaxed text-[#fdfbf7]/90 italic">
                     "{feedback.suggestedRevision}"
                   </p>
                 </div>
@@ -218,14 +218,14 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
         </div>
 
         {/* Writing Tips Sidebar */}
-        <div className="space-y-8">
-          <div className="bg-[#fdfbf7] p-8 border border-[#dccab1] shadow-xl h-fit">
-            <h3 className="flex items-center gap-3 font-bold text-[#2c1810] mb-8 uppercase tracking-widest border-b border-[#dccab1] pb-4">
-              <span className="text-2xl">🖋️</span>
+        <div className="lg:col-span-1 space-y-10">
+          <div className="bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-xl h-fit sticky top-28">
+            <h3 className="flex items-center gap-4 font-bold text-[#2c1810] mb-10 uppercase tracking-widest border-b border-[#dccab1] pb-6">
+              <span className="text-3xl">🖋️</span>
               Writing Checklist
             </h3>
             
-            <ul className="space-y-6">
+            <ul className="space-y-8">
               {[
                 { title: 'Headline (5-10 words)', desc: 'Is it Journalistic and centered?' },
                 { title: 'Byline', desc: 'Is the name from the question centered below?' },
@@ -233,30 +233,15 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
                 { title: 'PEEL Structure', desc: 'Point → Evidence → Explanation → Link?' },
                 { title: 'Full-Circle Return', desc: 'Does the ending link back to the hook?' }
               ].map((item, idx) => (
-                <li key={idx} className="flex gap-4 items-start group">
-                  <div className="mt-1 h-5 w-5 border-2 border-[#dccab1] group-hover:border-[#8b0000] transition-colors flex-shrink-0"></div>
+                <li key={idx} className="flex gap-5 items-start group">
+                  <div className="mt-1.5 h-6 w-6 border-2 border-[#dccab1] group-hover:border-[#8b0000] transition-colors flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-xs font-black text-[#2c1810] uppercase tracking-widest">{item.title}</h4>
-                    <p className="text-[11px] text-[#8b4513] font-serif italic mt-1 leading-relaxed">{item.desc}</p>
+                    <h4 className="text-sm font-black text-[#2c1810] uppercase tracking-widest">{item.title}</h4>
+                    <p className="text-xs text-[#8b4513] font-serif italic mt-2 leading-relaxed">{item.desc}</p>
                   </div>
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="bg-[#2c1810] p-10 shadow-2xl text-[#fdfbf7] relative overflow-hidden border border-[#dccab1]/20">
-            <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-[#d4af37]/10 -mr-4 -mt-4"></div>
-            <h4 className="font-bold text-xs uppercase tracking-[0.3em] mb-6 text-[#dccab1]">Style Guide</h4>
-            <div className="space-y-4">
-              <div className="border-l-2 border-[#8b0000] pl-4 py-2">
-                <p className="text-[9px] uppercase font-black text-[#dccab1]/50 tracking-[0.2em] mb-1">AGGRAVATE (v.)</p>
-                <p className="text-base font-serif italic font-bold">To make a bad situation even worse.</p>
-              </div>
-              <div className="border-l-2 border-[#d4af37] pl-4 py-2">
-                <p className="text-[9px] uppercase font-black text-[#dccab1]/50 tracking-[0.2em] mb-1">AMELIORATE (v.)</p>
-                <p className="text-base font-serif italic font-bold">To make a situation better.</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>

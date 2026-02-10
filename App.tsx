@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { View, Question, LearningModule } from './types';
 import { QUESTION_SETS } from './constants';
@@ -13,11 +14,9 @@ import Module6_AdvancedSkills from './components/Module6_AdvancedSkills';
 import Module7_MarkingScheme from './components/Module7_MarkingScheme';
 import Module8_Strategy from './components/Module8_Strategy';
 
-const FeatheryIcon = ({ size = "w-6 h-6" }: { size?: string }) => (
+const FeatherIcon = ({ size = "w-6 h-6" }: { size?: string }) => (
   <svg viewBox="0 0 24 24" fill="currentColor" className={size} xmlns="http://www.w3.org/2000/svg">
     <path d="M21 2c-1.5 0-3.5.7-5.5 2.5s-4.5 6.5-6.5 10.5c-1 2-2 4-3.5 5.5-1.5 1.5-2.5 2-3.5 2-0.5 0-1-.2-1.3-0.7c-0.3-0.5-0.4-1.2-0.2-2c0.2-1 0.8-2.5 2.5-4.5 1.5-1.8 3.5-3.2 5.5-4.2s4-1.5 6-1.5c1.5 0 3 0.5 4 1.5c0.6 0.6 0.6 1.5 0 2.1c-0.6 0.6-1.5 0.6-2.1 0c-0.6-0.6-1.5-1.1-2.9-1.1-1.5 0-3 0.5-4.5 1.5-1.5 1-3 2.5-4.5 4.5-0.8 1-1.5 2.5-1.5 3.5s0.5 1.5 1 1.5c0.8 0 1.8-0.8 3-2.5 1.2-1.7 2.2-3.8 3.5-6 2-3.5 4.5-7.5 7-9.5s4-2.5 5.5-2.5h1z" />
-    <path d="M14 9c0.5 0.5 1 1.5 1.5 2.5s1 2 1 2s-0.5 0.5-1 0.5s-1.5-1.5-2-2.5s-0.5-2-0.5-2s0.5-1 1-1z" opacity="0.4" />
-    <path d="M11 12c0.5 0.5 1 1.5 1.5 2.5s1 2 1 2s-0.5 0.5-1 0.5s-1.5-1.5-2-2.5s-0.5-2-0.5-2s0.5-1 1-1z" opacity="0.3" />
   </svg>
 );
 
@@ -73,12 +72,12 @@ const App: React.FC = () => {
       const currentIndex = MODULES.findIndex(m => m.id === selectedModuleId);
       return (
         <div className="animate-in fade-in duration-500 pb-20">
-          <div className="max-w-4xl mx-auto px-6">
+          <div className="max-w-[1440px] mx-auto px-6">
             <button onClick={() => navigateTo('lessons')} className="text-sm font-bold text-[#8b4513] hover:text-[#2c1810] flex items-center gap-2 mb-8 uppercase tracking-widest">
               &larr; Back to Curriculum
             </button>
             {renderModuleContent()}
-            <div className="flex justify-between items-center mt-16 border-t border-[#dccab1] pt-8">
+            <div className="flex justify-between items-center mt-16 border-t border-[#dccab1] pt-8 max-w-7xl mx-auto">
               <button disabled={currentIndex === 0} onClick={() => {
                  const prev = MODULES[currentIndex-1];
                  if (prev) navigateTo('module-detail', prev.id);
@@ -109,15 +108,11 @@ const App: React.FC = () => {
       case 'home':
         return (
           <div className="h-[calc(100vh-64px-32px)] flex items-center justify-center overflow-hidden">
-            <section className="text-center px-4 max-w-4xl mx-auto -mt-12 animate-in fade-in zoom-in duration-1000">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 border border-[#dccab1] text-[#8b4513] rounded-full text-xs font-bold tracking-[0.2em] uppercase bg-[#fdfbf7]">
-                <FeatheryIcon size="w-4 h-4" />
-                <span>The Master Blueprint</span>
-              </div>
+            <section className="text-center px-4 max-w-6xl mx-auto -mt-12 animate-in fade-in zoom-in duration-1000">
               <h1 className="text-8xl md:text-[10rem] font-bold text-[#2c1810] mb-6 leading-none italic tracking-tighter">
                 Inkly<span className="text-[#8b0000]">.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-[#5d4037] mb-12 leading-relaxed font-serif italic max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-[#5d4037] mb-12 leading-relaxed font-serif italic max-w-3xl mx-auto">
                 Step-by-step mastery for the perfect 5/5. High-impact vocabulary, time-blitz strategies, and exhaustive cheatsheets.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -135,14 +130,14 @@ const App: React.FC = () => {
       case 'lessons':
         return (
           <div className="animate-in fade-in duration-500 pb-20 px-6">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-[1440px] mx-auto">
               <h2 className="text-4xl font-bold text-center text-[#2c1810] mb-2 italic">Curriculum</h2>
               <p className="text-center text-lg text-[#8b4513] mb-12 font-serif italic">From Foundations to Exam Mastery.</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {MODULES.map((mod) => (
-                  <div key={mod.id} onClick={() => navigateTo('module-detail', mod.id)} className="bg-white p-6 border border-[#dccab1] shadow hover:border-[#8b0000] hover:-translate-y-1 transition-all cursor-pointer group">
+                  <div key={mod.id} onClick={() => navigateTo('module-detail', mod.id)} className="bg-white p-8 border border-[#dccab1] shadow hover:border-[#8b0000] hover:-translate-y-1 transition-all cursor-pointer group">
                     <div className="flex items-center gap-4 mb-4">
-                      <span className="text-3xl group-hover:scale-110 transition-transform">{mod.icon}</span>
+                      <span className="text-4xl group-hover:scale-110 transition-transform">{mod.icon}</span>
                       <div>
                         <span className="text-[10px] font-black text-[#8b4513] uppercase tracking-widest">{mod.category}</span>
                         <h3 className="text-lg font-bold text-[#2c1810]">{mod.title}</h3>
@@ -162,34 +157,34 @@ const App: React.FC = () => {
       case 'library':
         return (
           <div className="animate-in fade-in duration-500 px-6 pb-20">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-[1440px] mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-6">
                 <div>
                   <h2 className="text-4xl font-bold text-[#2c1810] italic">Writing Bank</h2>
                   <p className="text-[#8b4513] font-serif italic text-lg">Curated 24+ Solved Scenarios.</p>
                 </div>
-                <div className="relative w-full md:w-80">
+                <div className="relative w-full md:w-96">
                    <span className="absolute left-4 top-1/2 -translate-y-1/2 text-lg text-[#8b4513]">🖋️</span>
                    <input 
                     type="text" 
                     placeholder="Search topics..."
-                    className="w-full pl-10 pr-4 py-3 bg-[#fdfbf7] border-b-2 border-[#2c1810] focus:outline-none text-base"
+                    className="w-full pl-12 pr-4 py-4 bg-[#fdfbf7] border-b-2 border-[#2c1810] focus:outline-none text-lg"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                    />
                 </div>
               </div>
-              <div className="space-y-16">
+              <div className="space-y-20">
                 {QUESTION_SETS.map((set) => {
                   const filtered = set.questions.filter(q => q.questionText.toLowerCase().includes(searchQuery.toLowerCase()));
                   if (filtered.length === 0) return null;
                   return (
                     <div key={set.id}>
-                      <div className="flex items-center gap-4 mb-8 border-l-4 border-[#8b0000] pl-4">
-                         <div className="text-4xl">{set.icon}</div>
-                         <h3 className="text-2xl font-bold text-[#2c1810] uppercase tracking-tighter">{set.title}</h3>
+                      <div className="flex items-center gap-4 mb-8 border-l-4 border-[#8b0000] pl-6">
+                         <div className="text-5xl">{set.icon}</div>
+                         <h3 className="text-3xl font-bold text-[#2c1810] uppercase tracking-tighter">{set.title}</h3>
                       </div>
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
                         {filtered.map((q) => <QuestionCard key={q.id} question={q} onSelect={handleStartPractice} />)}
                       </div>
                     </div>
@@ -206,16 +201,16 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-transparent relative flex flex-col">
       <nav className="sticky top-0 z-50 bg-[#fdfbf7]/90 backdrop-blur-md border-b border-[#dccab1]">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-3 cursor-pointer group" onClick={() => navigateTo('home')}>
-            <div className="text-[#2c1810] p-1.5 border-2 border-[#2c1810] group-hover:bg-[#2c1810] group-hover:text-[#fdfbf7] transition-all">
-              <FeatheryIcon size="w-5 h-5" />
+        <div className="max-w-[1440px] mx-auto px-6 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-4 cursor-pointer group" onClick={() => navigateTo('home')}>
+            <div className="text-[#2c1810] p-2 border-2 border-[#2c1810] group-hover:bg-[#2c1810] group-hover:text-[#fdfbf7] transition-all">
+              <FeatherIcon size="w-6 h-6" />
             </div>
-            <span className="text-2xl font-bold text-[#2c1810] tracking-tighter italic">Inkly<span className="text-[#8b0000]">.</span></span>
+            <span className="text-3xl font-bold text-[#2c1810] tracking-tighter italic">Inkly<span className="text-[#8b0000]">.</span></span>
           </div>
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-12">
             {['home', 'lessons', 'library'].map(v => (
-              <button key={v} onClick={() => navigateTo(v as any)} className={`text-xs font-black uppercase tracking-widest transition-all ${activeView.includes(v) ? 'text-[#8b0000]' : 'text-[#3d2b1f] hover:text-[#8b0000]'}`}>
+              <button key={v} onClick={() => navigateTo(v as any)} className={`text-sm font-black uppercase tracking-widest transition-all ${activeView.includes(v) ? 'text-[#8b0000]' : 'text-[#3d2b1f] hover:text-[#8b0000]'}`}>
                 {v === 'lessons' ? 'Curriculum' : v === 'library' ? 'Practice' : v}
               </button>
             ))}
@@ -223,11 +218,11 @@ const App: React.FC = () => {
         </div>
       </nav>
 
-      <main className={`flex-grow ${activeView === 'home' ? '' : 'pt-10'}`}>
+      <main className={`flex-grow ${activeView === 'home' ? '' : 'pt-12'}`}>
         {renderContent()}
       </main>
 
-      <footer className="h-8 bg-[#2c1810] text-[#fdfbf7] flex items-center justify-center text-[10px] font-black uppercase tracking-[0.3em]">
+      <footer className="h-10 bg-[#2c1810] text-[#fdfbf7] flex items-center justify-center text-[12px] font-black uppercase tracking-[0.4em] sticky bottom-0 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
         Created by <span className="text-[#d4af37] ml-2">Shalaka Kashikar</span>
       </footer>
     </div>
