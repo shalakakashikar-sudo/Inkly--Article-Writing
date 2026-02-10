@@ -95,9 +95,9 @@ const Module8_Strategy: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-xl rounded-sm">
             <h4 className="text-[#8b0000] font-black uppercase text-[10px] mb-6 tracking-[0.4em]">Golden Rule #1</h4>
-            <p className="text-2xl font-serif italic leading-relaxed text-[#2c1810]">
-              <b>Done > Perfect.</b> A structured 4-paragraph article with basic words always beats a half-finished poem. <b>Finish the piece.</b>
-            </p>
+            <div className="text-2xl font-serif italic leading-relaxed text-[#2c1810]">
+              <b>Done &gt; Perfect.</b> A structured 4-paragraph article with basic words always beats a half-finished poem. <b>Finish the piece.</b>
+            </div>
           </div>
           <div className="bg-[#fdfbf7] p-10 border border-[#dccab1] shadow-xl rounded-sm">
             <h4 className="text-[#8b0000] font-black uppercase text-[10px] mb-6 tracking-[0.4em]">Golden Rule #2</h4>

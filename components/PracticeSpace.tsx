@@ -51,35 +51,32 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
     setFeedback(null);
 
     try {
-      // Re-initializing within the function ensures we pick up the latest process.env in various environments
+      // Create fresh instance right before call as per guidelines
       const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
       
       const response = await ai.models.generateContent({
         model: 'gemini-3-flash-preview', 
         contents: [
           {
-            text: `You are an expert CBSE/NCERT English Examiner. Grade this student article based on the INKLY standards.
+            text: `You are a strict yet encouraging expert examiner for Inkly, an article writing masterclass.
             
             INKLY CURRICULUM STANDARDS:
-            1. Format (1M): Catchy Title and Byline (both centered).
-            2. Hook: Intro must start with a Shocking Stat, Provocative Question, or Vivid Scenario.
-            3. Body (2M): PEEL structure (Point, Evidence, Explanation, Link). 
-            4. Expression (2M): Grammar and use of "High-Mark Verbs" (e.g., Ameliorate, Exacerbate, Paradigm Shift).
+            1. Format (1M): Center-aligned Title and Byline (e.g., By: Rahul, XII).
+            2. The Hook: Opening MUST be a Shocking Statistic, Provocative Question, or Vivid Scenario.
+            3. Body (2M): Must follow PEEL logic (Point, Evidence, Explanation, Link).
+            4. Expression (2M): Use of "High-Mark Verbs" (Ameliorate, Exacerbate, Paradigm Shift, Pervasive).
             
             Question: ${question.questionText}
-            Cues that must be addressed: ${question.cues.join(', ')}
+            Required Cues: ${question.cues.join(', ')}
             
             Student's Article:
             "${userText}"
             
-            Grading Instructions:
-            - Be strict but constructive.
-            - Total marks must be out of 5.
-            - Detect if they used a Hook, Byline, PEEL, and High-Mark Vocab.
-            - Provide a "Suggested Revision" for the intro paragraph.
-            - Explain the reasoning in 'revisionNotes'.
-            
-            Return the response as a clean JSON object.`
+            CRITICAL INSTRUCTIONS:
+            - Grade strictly out of 5 marks.
+            - Evaluate the QUALITY of the hook.
+            - Provide a suggested revision for the INTRO and explain the specific rhetorical technique used in your version (e.g. "I replaced your factual intro with a Vivid Scenario hook...").
+            - Return ONLY clean JSON.`
           }
         ],
         config: {
@@ -118,17 +115,20 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
       });
 
       if (response.text) {
-        // Safe parsing for deployment: remove any markdown formatting the model might add
-        let cleanJson = response.text.trim();
-        if (cleanJson.startsWith('```')) {
-          cleanJson = cleanJson.replace(/^```json\s*|```$/g, '');
+        // Robust JSON extraction to handle any potential markdown wrapping
+        let cleanText = response.text.trim();
+        if (cleanText.startsWith('```')) {
+            cleanText = cleanText.replace(/^```json\s*|```$/g, '');
         }
-        const result = JSON.parse(cleanJson);
+        const result = JSON.parse(cleanText);
         setFeedback(result);
       }
-    } catch (error) {
-      console.error("AI Review Error:", error);
-      alert("The examiner's red pen ran out of ink! This usually means the API_KEY is missing in your Vercel environment variables or the connection timed out. Please check your settings.");
+    } catch (error: any) {
+      console.error("AI Review failed:", error);
+      const msg = error.message?.includes("entity was not found") 
+        ? "API Key invalid or not found. Please ensure it is correctly set in your environment variables."
+        : "The examiner's red pen ran out of ink! Please check your internet connection or API Key settings.";
+      alert(msg);
     } finally {
       setIsReviewing(false);
     }
@@ -176,7 +176,7 @@ const PracticeSpace: React.FC<PracticeSpaceProps> = ({ question, onBack }) => {
                placeholder="HEADING (Centered)
 By: [Your Name] (Centered)
 
-Start with a powerful hook..."
+Start with a powerful hook... (Statistic, Question, or Scenario)"
                className="w-full h-[600px] p-12 bg-[#fdfbf7] border-2 border-[#dccab1] focus:border-[#2c1810] focus:outline-none text-[#2c1810] font-serif text-2xl leading-loose shadow-inner parchment-texture resize-none placeholder-[#8b4513]/20"
                disabled={isReviewing}
              />
@@ -187,7 +187,7 @@ Start with a powerful hook..."
                    <div className={`w-5 h-5 rounded-full border border-[#2c1810]/20 ${wordCount >= 120 && wordCount <= 200 ? 'bg-green-600' : wordCount > 200 ? 'bg-red-600' : 'bg-yellow-600'}`}></div>
                    <span className="text-xl font-black text-[#2c1810] tracking-tighter uppercase">{wordCount} / 150 WORDS</span>
                  </div>
-                 <p className="text-[10px] text-[#8b4513] font-bold uppercase italic tracking-widest">Ideal Exam Range: 120 - 150 words</p>
+                 <p className="text-[10px] text-[#8b4513] font-bold uppercase italic tracking-widest">Ideal Range: 120 - 150 words</p>
                </div>
                <button 
                   onClick={handleReview}
@@ -199,27 +199,26 @@ Start with a powerful hook..."
              </div>
           </div>
 
-          {/* Smarter Feedback Section */}
+          {/* Feedback Display */}
           {feedback && (
             <div ref={feedbackRef} className="bg-[#fdfbf7] border-4 border-[#2c1810] p-8 md:p-14 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-700 rounded-sm">
               <header className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 border-b-2 border-[#f1ede4] pb-10">
                 <div className="text-center md:text-left">
                   <h3 className="text-5xl font-bold text-[#2c1810] italic">The Red Pen Verdict</h3>
-                  <p className="text-[#8b4513] text-[12px] font-black uppercase tracking-[0.5em] mt-2">Official CBSE Pattern Evaluation</p>
+                  <p className="text-[#8b4513] text-[12px] font-black uppercase tracking-[0.5em] mt-2">Inkly Official Evaluation</p>
                 </div>
                 <div className="text-center bg-[#f1ede4] border border-[#dccab1] px-6 py-4 min-w-[120px]">
                     <div className="text-4xl font-black text-[#2c1810]">{feedback.marks.total}<span className="text-lg opacity-40">/5</span></div>
-                    <div className="text-[9px] font-black uppercase tracking-widest opacity-60">Final Grade</div>
+                    <div className="text-[9px] font-black uppercase tracking-widest opacity-60">Overall Score</div>
                 </div>
               </header>
 
-              {/* Checklist UI */}
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
                 {[
-                  { label: 'Hook Detected', value: feedback.techniquesDetected.hasHook },
+                  { label: 'Hook Found', value: feedback.techniquesDetected.hasHook },
                   { label: 'Centered Byline', value: feedback.techniquesDetected.hasByline },
-                  { label: 'PEEL Structure', value: feedback.techniquesDetected.hasPEEL },
-                  { label: 'Power Vocab', value: feedback.techniquesDetected.hasHighMarkVocab },
+                  { label: 'PEEL Logic', value: feedback.techniquesDetected.hasPEEL },
+                  { label: 'High-Mark Vocab', value: feedback.techniquesDetected.hasHighMarkVocab },
                 ].map((tech, i) => (
                   <div key={i} className={`p-4 border-2 flex flex-col items-center justify-center gap-2 ${tech.value ? 'bg-green-50 border-green-600/30 text-green-800' : 'bg-red-50 border-red-600/30 text-red-800'}`}>
                     <span className="text-2xl font-bold">{tech.value ? '✓' : '✗'}</span>
@@ -228,7 +227,6 @@ Start with a powerful hook..."
                 ))}
               </div>
 
-              {/* Scoring Breakdown */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <div className="p-8 bg-[#f1ede4] text-center border border-[#dccab1]">
                   <h5 className="text-[10px] font-black uppercase text-[#8b4513] mb-4 tracking-[0.2em]">Format</h5>
@@ -244,7 +242,6 @@ Start with a powerful hook..."
                 </div>
               </div>
 
-              {/* Categorized Comments */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
                 <div className="space-y-8">
                   <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#2c1810] border-b-2 border-[#2c1810] pb-2">The Inkly Edge (Strengths)</h4>
@@ -271,7 +268,6 @@ Start with a powerful hook..."
                 </div>
               </div>
 
-              {/* Revision Comparison */}
               <div className="space-y-12">
                 <div className="p-10 md:p-14 bg-[#2c1810] text-white shadow-2xl relative overflow-hidden rounded-sm">
                   <div className="absolute top-0 right-0 w-32 h-32 bg-[#d4af37]/10 -mr-16 -mt-16 rounded-full"></div>
